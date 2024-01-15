@@ -1,5 +1,5 @@
-function getDate() {
-  const days = [
+function getCurrentDate() {
+  const daysOfWeek = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -24,18 +24,19 @@ function getDate() {
     "December",
   ];
 
-  const today = new Date();
-  const day = days[today.getDay()];
-  const month = months[today.getMonth()];
-  const date = today.getDate();
-  const year = today.getFullYear();
-  return `${day}, ${month} ${date}, ${year}`;
+  const currentDate = new Date();
+  const dayOfWeek = daysOfWeek[currentDate.getDay()];
+  const month = months[currentDate.getMonth()];
+  const dayOfMonth = currentDate.getDate();
+  const year = currentDate.getFullYear();
+
+  return `${dayOfWeek}, ${month} ${dayOfMonth}, ${year}`;
 }
 
-export default function CurrentDate() {
+export default function GetCurrentDate() {
   return (
     <div>
-      <span className="block font-bold">{getDate()}</span>
+      <span className="block font-bold">{getCurrentDate()}</span>
       <a href="https://www.nytimes.com/section/todayspaper">Today's Paper</a>
     </div>
   );
