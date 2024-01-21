@@ -1,3 +1,5 @@
+// TODO: Map 2 sections
+
 import Icon from "./ui/icons";
 
 export default function Menu() {
