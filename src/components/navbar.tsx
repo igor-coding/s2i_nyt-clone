@@ -2,7 +2,7 @@
 // from id:0 to id:5 and from id:6 to id:10
 
 import { navbar } from "@/data/navbar.json";
-import Icon from "@/components/ui/icons";
+import Icons from "@/components/ui/icons";
 
 const navbarSubmenu = [
   {
@@ -23,7 +23,7 @@ export const Navbar = () => {
           >
             <a href={nav.href}>{nav.text}</a>
             <button type="button" className="pl-1">
-              {Icon.chevronDown}
+              {Icons.chevronDown}
             </button>
             <div className="relative">
               <div className="h-10 w-10 bg-red-500">

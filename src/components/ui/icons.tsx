@@ -12,7 +12,7 @@ import {
   Dot,
 } from "lucide-react";
 
-const Icon = {
+const Icons = {
   menu: <Menu className="h-5 w-5" />,
   search: <Search className="h-5 w-5" />,
   chevronUp: <ChevronUp className="h-4 w-4 text-neutral-400" />,
@@ -32,4 +32,4 @@ const Icon = {
   dot: <Dot className="h-5 w-5" />,
 };
 
-export default Icon;
+export default Icons;

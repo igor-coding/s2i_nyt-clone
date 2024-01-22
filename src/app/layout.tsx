@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
-import { Footer } from "@/components/footer";
+import { Footer } from "@/components/Footer";
 import { albert_sans } from "@/components/ui/fonts";
 
 import { cn } from "@/utils/cn";

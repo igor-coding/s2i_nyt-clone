@@ -1,6 +1,6 @@
 // TODO: Map 2 sections
 
-import Icon from "./ui/icons";
+import Icons from "@/components/ui/icons";
 
 export default function Menu() {
   return (
@@ -10,7 +10,7 @@ export default function Menu() {
           <li className="rounded hover:bg-slate-200 dark:hover:bg-slate-700">
             <a href="/" className="flex items-center justify-between pl-2">
               Home Page
-              {Icon.chevronRight}
+              {Icons.chevronRight}
             </a>
           </li>
           <li>
