@@ -18,8 +18,8 @@ const Icons = {
   chevronUp: <ChevronUp className="h-4 w-4 text-neutral-400" />,
   chevronDown: <ChevronDown className="h-4 w-4 text-neutral-400" />,
   chevronRight: <ChevronRight className="h-4 w-4 text-neutral-400" />,
-  moveUp: <MoveUp className="h-2.5 w-2.5 text-green-800 dark:text-green-600" />,
-  moveDown: <MoveDown className="h-2.5 w-2.5 text-red-800 dark:text-red-600" />,
+  moveUp: <MoveUp className="h-2.5 w-2.5" />,
+  moveDown: <MoveDown className="h-2.5 w-2.5" />,
   arrowLeftCircle: (
     <ArrowLeftCircle className="h-5 w-5 hover:fill-neutral-100 dark:hover:fill-neutral-900" />
   ),

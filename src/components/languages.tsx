@@ -1,10 +1,10 @@
-import { languages } from "../data/languages.json";
+import languges from "@/data/languages";
 
 export default function Languages() {
   return (
     <div className="flex justify-center">
       <ul className="flex">
-        {languages.map((language) => (
+        {languges?.map((language) => (
           <li
             key={language.id}
             className="py-[4px] px-[6px] rounded dark:hover:bg-neutral-900"

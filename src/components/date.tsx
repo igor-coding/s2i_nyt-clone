@@ -1,42 +1,16 @@
-function getCurrentDate() {
-  const daysOfWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+const currentDate = new Date();
 
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-
-  const currentDate = new Date();
-  const dayOfWeek = daysOfWeek[currentDate.getDay()];
-  const month = months[currentDate.getMonth()];
-  const dayOfMonth = currentDate.getDate();
-  const year = currentDate.getFullYear();
-
-  return `${dayOfWeek}, ${month} ${dayOfMonth}, ${year}`;
-}
+const formattedDate = new Intl.DateTimeFormat("en-US", {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+}).format(currentDate);
 
 export default function GetCurrentDate() {
   return (
-    <div>
-      <span className="block font-bold">{getCurrentDate()}</span>
+    <div className="flex-1 text-left">
+      <span className="block font-bold">{formattedDate}</span>
       <a href="https://www.nytimes.com/section/todayspaper">Today's Paper</a>
     </div>
   );

@@ -3,13 +3,14 @@
 import { Button } from "@/components/ui/buttons";
 import Icons from "@/components/ui/icons";
 import Languages from "@/components/Languages";
-import { Navbar } from "@/components/Navbar";
-import { NavbarSubmenu } from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 import { ToggleSearchBar } from "@/components/ui/buttons";
 import Menu from "@/components/Menu";
 import { ToggleSideBar } from "@/components/ui/buttons";
 import GetCurrentDate from "@/components/Date";
 import Indices from "@/components/Indices";
+
+// TODO: Use flex for 1st section like the 2nd section
 
 export default function Home() {
   return (
@@ -72,7 +73,7 @@ export default function Home() {
         <section className="pt-2 pb-1 flex justify-between items-center border-b border-b-neutral-200 dark:border-b-neutral-700">
           <GetCurrentDate />
           {/* Make the logo to the center */}
-          <a href="/">
+          <a href="/" className="flex-1 text-center">
             <svg
               viewBox="0 0 184 25"
               className="h-[60px] w-[420px] fill-black dark:fill-white"
@@ -83,7 +84,6 @@ export default function Home() {
           <Indices />
         </section>
         <Navbar />
-        <NavbarSubmenu />
       </header>
     </div>
   );
