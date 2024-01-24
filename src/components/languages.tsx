@@ -2,7 +2,7 @@ import languges from "@/data/languages";
 
 export default function Languages() {
   return (
-    <div className="flex justify-center">
+    <div className="flex flex-1 justify-center">
       <ul className="flex">
         {languges?.map((language) => (
           <li

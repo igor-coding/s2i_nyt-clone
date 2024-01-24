@@ -10,15 +10,13 @@ import { ToggleSideBar } from "@/components/ui/buttons";
 import GetCurrentDate from "@/components/Date";
 import Indices from "@/components/Indices";
 
-// TODO: Use flex for 1st section like the 2nd section
-
 export default function Home() {
   return (
     <div className="w-full">
       <Menu />
-      <header className="relative max-w-7xl m-auto px-[3%] text-xs">
-        <section className="relative max-w-[1605px] h-[36px] my-0 mx-auto pt-2 px-3 pb-2 text-[10px]">
-          <div className="absolute left-0 flex space-around">
+      <header className="max-w-7xl m-auto px-[3%] text-xs">
+        <section className="flex pt-2 pb-2 text-[10px]">
+          <div className="flex flex-1 justify-start space-around">
             <Button
               type="button"
               className="hover:bg-neutral-100 dark:hover:bg-neutral-900"
@@ -34,7 +32,7 @@ export default function Home() {
               {Icons.search}
             </Button>
             <form method="get" action="/search" className="hidden space-x-1">
-              <div className="w-56 border rounded border-neutral-500 focus-within:border-1 focus-within:border-black focus-within:shadow dark:focus-within:border-white py-1 px-2 flex text-base">
+              <div className="border rounded border-neutral-500 focus-within:border-1 focus-within:border-black focus-within:shadow dark:focus-within:border-white px-2 flex text-base">
                 <input
                   type="search"
                   placeholder="SEARCH"
@@ -55,7 +53,7 @@ export default function Home() {
             </form>
           </div>
           <Languages />
-          <div className="absolute top-2 right-0 flex space-x-4 items-center">
+          <div className="flex flex-1 justify-end space-x-4 items-center">
             <Button
               type="button"
               className="bg-accent hover:bg-accentHover font-bold text-[11px]"

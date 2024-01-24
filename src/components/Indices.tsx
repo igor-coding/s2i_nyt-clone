@@ -4,8 +4,6 @@ import { useState, useEffect } from "react";
 import indices from "@/data/indices";
 import Icons from "@/components/ui/icons";
 
-// TODO: Change useEffect with react-query
-
 export default function Indices() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
