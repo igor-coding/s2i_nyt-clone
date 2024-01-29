@@ -16,7 +16,10 @@ export function Button({ type, className, onClick, children }: Props) {
   return (
     <button
       type={type}
-      className={cn("py-[7px] px-[9px] rounded text-white", className)}
+      className={cn(
+        "py-[7px] px-[9px] rounded text-white duration-300 hover:duration-300",
+        className,
+      )}
       onClick={onClick}
     >
       {children}

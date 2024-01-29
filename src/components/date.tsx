@@ -11,7 +11,12 @@ export default function GetCurrentDate() {
   return (
     <div className="flex-1 text-left">
       <span className="block font-bold">{formattedDate}</span>
-      <a href="https://www.nytimes.com/section/todayspaper">Today's Paper</a>
+      <a
+        href="https://www.nytimes.com/section/todayspaper"
+        className="hover:text-neutral-200 duration-300 hover:duration-300"
+      >
+        Today's Paper
+      </a>
     </div>
   );
 }

@@ -7,7 +7,7 @@ export default function Languages() {
         {languges?.map((language) => (
           <li
             key={language.id}
-            className="py-[4px] px-[6px] rounded dark:hover:bg-neutral-900"
+            className="py-[4px] px-[6px] rounded hover:bg-neutral-200 dark:hover:bg-neutral-800 duration-300 hover:duration-300"
           >
             <a lang={language.lang} href={language.href}>
               {language.text}

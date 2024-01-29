@@ -17,7 +17,7 @@ export default function BtnMenu() {
     <>
       <Button
         type="button"
-        className="hover:bg-neutral-100 dark:hover:bg-neutral-900"
+        className="hover:bg-neutral-200 dark:hover:bg-neutral-800"
         onClick={handleClick}
       >
         {Icons.menu}

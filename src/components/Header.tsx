@@ -18,7 +18,7 @@ export default function Header() {
             <BtnMenu />
             <Button
               type="button"
-              className="hover:bg-neutral-100 dark:hover:bg-neutral-900"
+              className="hover:bg-neutral-200 dark:hover:bg-neutral-800"
               onClick={ToggleSearchBar}
             >
               {Icons.search}
@@ -48,13 +48,13 @@ export default function Header() {
           <div className="flex flex-1 justify-end space-x-4 items-center">
             <Button
               type="button"
-              className="bg-accent hover:bg-accentHover font-bold text-[11px]"
+              className="bg-accent hover:bg-accentHover font-bold text-xxs"
             >
               SUBSCRIBE FOR €0.50/WEEK
             </Button>
             <Button
               type="button"
-              className="bg-accent hover:bg-accentHover font-bold text-[11px]"
+              className="bg-accent hover:bg-accentHover font-bold text-xxs"
             >
               LOG IN
             </Button>
