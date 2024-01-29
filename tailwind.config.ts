@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        xxs: "0.675rem",
+      },
       colors: {
         accent: "#567B95",
         accentHover: "#326891",

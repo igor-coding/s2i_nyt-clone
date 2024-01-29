@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
-import "./globals.css";
-import { Footer } from "@/components/Footer";
+import "@/app/globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { albert_sans } from "@/components/ui/fonts";
 
 import { cn } from "@/utils/cn";
@@ -24,7 +25,8 @@ export default function RootLayout({
           albert_sans.className,
         )}
       >
-        <main className="h-sceen flex justify-center">{children}</main>
+        <Header />
+        {children}
         <Footer />
       </body>
     </html>

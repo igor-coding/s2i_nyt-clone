@@ -1,4 +1,10 @@
-export const navbar = [
+type Navbar = {
+  id: number;
+  href: string;
+  text: string;
+};
+
+export const navbar: Navbar[] = [
   {
     id: 0,
     href: "https://www.nytimes.com/section/us",
@@ -32,7 +38,7 @@ export const navbar = [
 ];
 
 // TODO: Change `navbar2` name
-export const navbar2 = [
+export const navbar2: Navbar[] = [
   {
     id: 6,
     href: "https://www.nytimes.com/spotlight/podcasts",

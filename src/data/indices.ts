@@ -1,6 +1,13 @@
 import Icons from "@/components/ui/icons";
 
-const indices = [
+type Index = {
+  id: number;
+  index: string;
+  chg: string;
+  icon: React.ReactNode;
+};
+
+const indices: Index[] = [
   {
     id: 1,
     index: "Nasdaq",

@@ -1,4 +1,11 @@
-const languages = [
+type Language = {
+  id: number;
+  lang: string;
+  href: string;
+  text: string;
+};
+
+const languages: Language[] = [
   {
     id: 0,
     lang: "en-US",

@@ -2,9 +2,9 @@
 
 import Icons from "@/components/ui/icons";
 
-export default function Menu() {
+export default function SideBar() {
   return (
-    <section className="sidebar hidden z-50 absolute h-screen w-60 p-4 bg-white dark:bg-black border-r border-neutral-200 dark:border-neutral-700 font-bold">
+    <section className="sidebar z-50 absolute h-screen w-60 p-4 bg-white dark:bg-black border-r border-neutral-200 dark:border-neutral-700 font-bold">
       <ul>
         <div className="pb-4 border-b border-neutral-200 dark:border-neutral-700">
           <li className="rounded hover:bg-slate-200 dark:hover:bg-slate-700">
