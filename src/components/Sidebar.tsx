@@ -1,91 +1,46 @@
-// TODO: Map 2 sections
-
 import Icons from "@/components/ui/icons";
 
-export default function SideBar() {
+import { sidebar } from "@/data/sidebar";
+import { sidebar2 } from "@/data/sidebar";
+
+export default function Sidebar() {
   return (
-    <section className="absolute top-0 left-0 h-screen w-60 p-4 z-1 drop-shadow-xl font-bold text-base bg-white dark:bg-black border-r border-neutral-200 dark:border-neutral-700">
-      <ul>
-        <div className="pb-4 border-b border-neutral-200 dark:border-neutral-700">
-          <li className="rounded hover:bg-slate-200 dark:hover:bg-slate-700">
-            <a href="/" className="flex items-center justify-between pl-2">
-              Home Page
+    <aside className="absolute top-0 left-0 h-full w-60 z-10 border-r border-r-neutral-200 dark:border-r-neutral-700 shadow-xl font-bold text-base">
+      <ul className="m-4 pb-4 border-b border-neutral-200 dark:border-b-neutral-700">
+        {sidebar?.map((bar) => (
+          <li
+            key={bar.id}
+            className="py-px px-2 rounded hover:bg-sky-100 dark:hover:bg-sky-950 duration-150"
+          >
+            <a href={bar.href} className="flex justify-between items-center">
+              {bar.text}
               {Icons.chevronRight}
             </a>
           </li>
-          <li>
-            <a href="">World</a>
-          </li>
-          <li>
-            <a href="">Business</a>
-          </li>
-          <li>
-            <a href="">Politics</a>
-          </li>
-          <li>
-            <a href="">U.S.</a>
-          </li>
-          <li>
-            <a href="">Sports</a>
-          </li>
-          <li>
-            <a href="">Health</a>
-          </li>
-          <li>
-            <a href="">N.Y.</a>
-          </li>
-          <li>
-            <a href="">Opinion</a>
-          </li>
-          <li>
-            <a href="">Tech</a>
-          </li>
-          <li>
-            <a href="">Science</a>
-          </li>
-        </div>
-        <div className="py-4 border-b border-neutral-200 dark:border-neutral-700">
-          <li>
-            <a href="">Arts</a>
-          </li>
-          <li>
-            <a href="">Book Review</a>
-          </li>
-          <li>
-            <a href="">Style</a>
-          </li>
-          <li>
-            <a href="">Food</a>
-          </li>
-          <li>
-            <a href="">Travel</a>
-          </li>
-          <li>
-            <a href="">Magazine</a>
-          </li>
-          <li>
-            <a href="">T Magazine</a>
-          </li>
-          <li>
-            <a href="">Real Estate</a>
-          </li>
-          <li>
-            <a href="">Obituaries</a>
-          </li>
-          <li>
-            <a href="">Video</a>
-          </li>
-          <li>
-            <a href="">Graphics</a>
-          </li>
-          <li>
-            <a href="">The Upshot</a>
-          </li>
-        </div>
-        <li className="pt-4">
-          <a href="">More</a>
-        </li>
+        ))}
       </ul>
-    </section>
+      <ul className="m-4 pb-4 border-b border-b-neutral-200 dark:border-b-neutral-700">
+        {sidebar2?.map((bar) => (
+          <li
+            key={bar.id}
+            className="py-px px-2 rounded hover:bg-sky-100 dark:hover:bg-sky-950 duration-150"
+          >
+            <a href={bar.href} className="flex justify-between items-center">
+              {bar.text}
+              {Icons.chevronRight}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div className="m-4 rounded hover:bg-sky-100 dark:hover:bg-sky-950 duration-150">
+        <a
+          href="https://www.nytimes.com/#"
+          className="px-2 flex justify-between items-center"
+        >
+          More
+          {Icons.chevronRight}
+        </a>
+      </div>
+    </aside>
   );
 }

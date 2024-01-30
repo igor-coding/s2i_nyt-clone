@@ -1,6 +1,7 @@
+import Icons from "@/components/ui/icons";
+
 import { navbar } from "@/data/navbar";
 import { navbar2 } from "@/data/navbar";
-import Icons from "@/components/ui/icons";
 
 export default function Navbar() {
   return (
