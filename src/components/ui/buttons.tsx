@@ -1,7 +1,13 @@
 "use client";
 
 import { ReactNode } from "react";
+import { useState } from "react";
+
 import { cn } from "@/utils/cn";
+
+import Sidebar from "@/components/Sidebar";
+import Searchbar from "@/components/Searchbar";
+import Icons from "@/components/ui/icons";
 
 type ButtonType = "button" | "submit";
 
@@ -9,7 +15,7 @@ interface Props {
   type: ButtonType;
   className: string;
   children: ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export function Button({ type, className, onClick, children }: Props) {
@@ -27,27 +33,44 @@ export function Button({ type, className, onClick, children }: Props) {
   );
 }
 
-// FIX: Make the `ToggleButton` function easy
-// with state and prop... https://www.youtube.com/watch?v=w7ejDZ8SWv8
+export function ToggleSidebar() {
+  const [isOpen, setIsOpen] = useState(false);
 
-export function ToggleSideBar() {
-  const sidebar = document.querySelector(".sidebar");
-  if (sidebar?.classList.contains("hidden")) {
-    sidebar?.classList.remove("hidden");
-    sidebar?.classList.add("block");
-  } else {
-    sidebar?.classList.remove("block");
-    sidebar?.classList.add("hidden");
+  function handleClick() {
+    setIsOpen(!isOpen);
   }
+
+  return (
+    <>
+      <Button
+        type="button"
+        onClick={handleClick}
+        className="hover:bg-neutral-200 dark:hover:bg-neutral-800 text-black dark:text-white"
+      >
+        {Icons.menu}
+      </Button>
+      {isOpen && <Sidebar />}
+    </>
+  );
 }
 
-export function ToggleSearchBar() {
-  const form = document.querySelector("form");
-  if (form?.classList.contains("hidden")) {
-    form?.classList.remove("hidden");
-    form?.classList.add("flex");
-  } else {
-    form?.classList.remove("flex");
-    form?.classList.add("hidden");
+export function ToggleSearchbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleClick() {
+    setIsOpen(!isOpen);
   }
+
+  return (
+    <>
+      <Button
+        type="button"
+        onClick={handleClick}
+        className="hover:bg-neutral-200 dark:hover:bg-neutral-800 text-black dark:text-white"
+      >
+        {Icons.search}
+      </Button>
+      {isOpen && <Searchbar />}
+    </>
+  );
 }

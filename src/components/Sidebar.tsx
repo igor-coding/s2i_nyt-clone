@@ -4,7 +4,7 @@ import Icons from "@/components/ui/icons";
 
 export default function SideBar() {
   return (
-    <section className="sidebar z-50 absolute h-screen w-60 p-4 bg-white dark:bg-black border-r border-neutral-200 dark:border-neutral-700 font-bold">
+    <section className="absolute top-0 left-0 h-screen w-60 p-4 z-1 drop-shadow-xl font-bold text-base bg-white dark:bg-black border-r border-neutral-200 dark:border-neutral-700">
       <ul>
         <div className="pb-4 border-b border-neutral-200 dark:border-neutral-700">
           <li className="rounded hover:bg-slate-200 dark:hover:bg-slate-700">

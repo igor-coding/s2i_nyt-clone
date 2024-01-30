@@ -1,7 +1,8 @@
-# TODO's
+TODO:
 
-- TODO: Add animation on buttons (change the color slowly from lighter to darker)
+- Add animation on buttons (change the color slowly from lighter to darker)
+- Defer some news with `suspense` in Next.js 14 (https://www.youtube.com/live/HjCbrGRSvoY?si=mRMSzMyQSRg6YW1m&t=3613)
 
-# FIXES
+FIX:
 
-- FIX: Make buttons props more dynamic... https://frontendmasters.com/courses/typescript-v4/
+- Make buttons props more dynamic... https://frontendmasters.com/courses/typescript-v4/

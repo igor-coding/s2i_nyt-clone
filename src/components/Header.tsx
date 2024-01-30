@@ -1,51 +1,25 @@
+import Link from "next/link";
+
 import { Button } from "@/components/ui/buttons";
-import Icons from "@/components/ui/icons";
+import { ToggleSidebar } from "@/components/ui/buttons";
+import { ToggleSearchbar } from "@/components/ui/buttons";
+
 import Languages from "@/components/Languages";
-import Navbar from "@/components/Navbar";
-import { ToggleSearchBar } from "@/components/ui/buttons";
-import { ToggleSideBar } from "@/components/ui/buttons";
 import GetCurrentDate from "@/components/Date";
 import Indices from "@/components/Indices";
-import BtnMenu from "@/components/ui/BtnMenu";
-import Link from "next/link";
+import Navbar from "@/components/Navbar";
 
 export default function Header() {
   return (
     <div className="w-full">
       <header className="max-w-7xl m-auto px-[3%] text-xs">
         <section className="flex items-center pt-2 pb-2 text-xxs">
-          <div className="flex flex-1 justify-start space-around">
-            <BtnMenu />
-            <Button
-              type="button"
-              className="hover:bg-neutral-200 dark:hover:bg-neutral-800"
-              onClick={ToggleSearchBar}
-            >
-              {Icons.search}
-            </Button>
-            <form method="get" action="/search" className="hidden space-x-1">
-              <div className="border rounded border-neutral-500 focus-within:border-1 focus-within:border-black focus-within:shadow dark:focus-within:border-white px-2 flex text-base">
-                <input
-                  type="search"
-                  placeholder="SEARCH"
-                  className="placeholder:text-neutral-400"
-                />
-                <input
-                  type="reset"
-                  value="CLEAR"
-                  className="pl-2 text-xxs text-neutral-400 cursor-pointer"
-                />
-              </div>
-              <Button
-                type="submit"
-                className="text-xxs font-bold bg-accent hover:bg-accentHover"
-              >
-                GO
-              </Button>
-            </form>
+          <div className="flex flex-1">
+            <ToggleSidebar />
+            <ToggleSearchbar />
           </div>
           <Languages />
-          <div className="flex flex-1 justify-end space-x-4 items-center">
+          <div className="flex flex-1 justify-end space-x-4 items-center text-white">
             <Button
               type="button"
               className="bg-accent hover:bg-accentHover font-bold text-xxs"
@@ -62,7 +36,6 @@ export default function Header() {
         </section>
         <section className="pt-2 pb-1 flex justify-between items-center border-b border-b-neutral-200 dark:border-b-neutral-700">
           <GetCurrentDate />
-          {/* Make the logo to the center */}
           <Link href="/" className="flex-1 text-center">
             <svg
               viewBox="0 0 184 25"
