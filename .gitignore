@@ -17,8 +17,9 @@
 # misc
 *.pem
 # TODO.md
-Session.vim
 .DS_Store
+**/.DS_Store
+Session.vim
 
 # debug
 npm-debug.log*

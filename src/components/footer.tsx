@@ -4,7 +4,7 @@ import poweredbyNytDark from "../../public/poweredby-nyt_dark.png";
 
 export default function Footer() {
   return (
-    <footer className="max-w-7xl m-auto py-4 flex justify-between text-end">
+    <footer className="mb-2 pt-4 border-t flex justify-between text-end">
       <a href="https://developer.nytimes.com">
         <picture>
           <source

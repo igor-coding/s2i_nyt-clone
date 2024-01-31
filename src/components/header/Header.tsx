@@ -12,7 +12,7 @@ import Navbar from "@/components/header/Navbar";
 export default function Header() {
   return (
     <div className="w-full">
-      <header className="max-w-7xl m-auto text-xs">
+      <header className="text-xs">
         <section className="flex items-center pt-2 pb-2 text-xxs">
           <div className="flex flex-1">
             <ToggleSidebar />

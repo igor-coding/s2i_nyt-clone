@@ -5,7 +5,7 @@ import { sidebar2 } from "@/data/sidebar";
 
 export default function Sidebar() {
   return (
-    <aside className="absolute top-0 left-0 h-full w-60 z-10 bg-white dark:bg-black border-r border-r-neutral-200 dark:border-r-neutral-700 shadow-xl font-bold text-base">
+    <nav className="absolute top-0 left-0 h-full w-60 z-10 bg-white dark:bg-black border-r border-r-neutral-200 dark:border-r-neutral-700 shadow-xl font-bold text-base">
       <ul className="m-4 pb-4 border-b border-neutral-200 dark:border-b-neutral-700">
         {sidebar?.map((bar) => (
           <li
@@ -41,6 +41,6 @@ export default function Sidebar() {
           {Icons.chevronRight}
         </a>
       </div>
-    </aside>
+    </nav>
   );
 }
