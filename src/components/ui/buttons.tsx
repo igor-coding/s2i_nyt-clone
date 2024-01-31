@@ -5,8 +5,8 @@ import { useState } from "react";
 
 import { cn } from "@/utils/cn";
 
-import Sidebar from "@/components/Sidebar";
-import Searchbar from "@/components/Searchbar";
+import Sidebar from "@/components/header/Sidebar";
+import Searchbar from "@/components/header/Searchbar";
 import Icons from "@/components/ui/icons";
 
 type ButtonType = "button" | "submit";

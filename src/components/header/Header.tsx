@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/buttons";
 import { ToggleSidebar } from "@/components/ui/buttons";
 import { ToggleSearchbar } from "@/components/ui/buttons";
 
-import Languages from "@/components/Languages";
-import GetCurrentDate from "@/components/Date";
-import Indices from "@/components/Indices";
-import Navbar from "@/components/Navbar";
+import Languages from "@/components/header/Languages";
+import GetCurrentDate from "@/components/header/Date";
+import Indices from "@/components/header/Indices";
+import Navbar from "@/components/header/Navbar";
 
 export default function Header() {
   return (

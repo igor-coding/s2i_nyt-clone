@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-
-import "@/app/globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { albert_sans } from "@/components/ui/fonts";
 
 import { cn } from "@/utils/cn";
+
+import "@/app/globals.css";
+
+import Header from "@/components/header/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "s2i: NYT Clone",

@@ -37,7 +37,6 @@ export const navbar: Navbar[] = [
   },
 ];
 
-// TODO: Change `navbar2` name
 export const navbar2: Navbar[] = [
   {
     id: 6,
