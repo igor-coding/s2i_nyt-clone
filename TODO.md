@@ -2,6 +2,7 @@ TODO:
 
 - Add animation on buttons (change the color slowly from lighter to darker)
 - Defer some news with `suspense` in Next.js 14 (https://www.youtube.com/live/HjCbrGRSvoY?si=mRMSzMyQSRg6YW1m&t=3613)
+- Make it responsive
 
 FIX:
 
