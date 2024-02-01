@@ -1,30 +1,28 @@
-"use client";
-
 import { ReactNode } from "react";
-import { useState } from "react";
+import { useToggle } from "@/hooks/useToggle";
+import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut";
 
 import { cn } from "@/utils/cn";
-import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut";
 
 import Sidebar from "@/components/header/Sidebar";
 import Searchbar from "@/components/header/Searchbar";
+import Help from "@/components/header/Help";
 import Icons from "@/components/ui/icons";
 
 type ButtonType = "button" | "submit";
-
-interface Props {
+interface ButtonProps {
   type: ButtonType;
   className: string;
   children: ReactNode;
   onClick?: () => void;
 }
 
-export function Button({ type, className, onClick, children }: Props) {
+export function Button({ type, className, onClick, children }: ButtonProps) {
   return (
     <button
       type={type}
       className={cn(
-        "py-[7px] px-[9px] rounded text-white duration-300 hover:duration-300",
+        "outline-none py-[7px] px-[9px] rounded text-white duration-300 hover:duration-300",
         className,
       )}
       onClick={onClick}
@@ -34,21 +32,29 @@ export function Button({ type, className, onClick, children }: Props) {
   );
 }
 
-export function ToggleSidebar() {
-  const [isOpen, setIsOpen] = useState(false);
+// export function ToggleSidebar() {
+//   return (
+//     <Toggle icon={Icons.menu} component={<Sidebar />} shortcutKey="escape" />
+//   );
+// }
+//
+// export function ToggleSearchbar() {
+//   return (
+//     <Toggle icon={Icons.search} component={<Searchbar />} shortcutKey="/" />
+//   );
+// }
 
-  function handleClick() {
-    setIsOpen(!isOpen);
-  }
+export function BtnSidebar() {
+  const { isOpen, handleToggle } = useToggle();
 
-  useKeyboardShortcut(["escape"], () => setIsOpen(true && !isOpen));
+  useKeyboardShortcut(["%"], () => handleToggle());
 
   return (
     <>
       <Button
         type="button"
-        onClick={handleClick}
-        className="outline-none hover:bg-neutral-200 dark:hover:bg-neutral-800 text-black dark:text-white"
+        onClick={handleToggle}
+        className="hover:bg-neutral-200 dark:hover:bg-neutral-800 text-black dark:text-white"
       >
         {Icons.menu}
       </Button>
@@ -57,25 +63,40 @@ export function ToggleSidebar() {
   );
 }
 
-export function ToggleSearchbar() {
-  const [isOpen, setIsOpen] = useState(false);
+export function BtnSearchbar() {
+  const { isOpen, handleToggle } = useToggle();
 
-  function handleClick() {
-    setIsOpen(!isOpen);
-  }
-
-  useKeyboardShortcut(["/"], () => setIsOpen(true && !isOpen));
+  useKeyboardShortcut(["/"], () => handleToggle());
 
   return (
     <>
       <Button
         type="button"
-        onClick={handleClick}
-        className="outline-none hover:bg-neutral-200 dark:hover:bg-neutral-800 text-black dark:text-white"
+        onClick={handleToggle}
+        className="hover:bg-neutral-200 dark:hover:bg-neutral-800 text-black dark:text-white"
       >
         {Icons.search}
       </Button>
       {isOpen && <Searchbar />}
+    </>
+  );
+}
+
+export function BtnHelp() {
+  const { isOpen, handleToggle } = useToggle();
+
+  useKeyboardShortcut(["?"], () => handleToggle());
+
+  return (
+    <>
+      <Button
+        type="button"
+        onClick={handleToggle}
+        className="hover:bg-neutral-200 dark:hover:bg-neutral-800 text-black dark:text-white"
+      >
+        {Icons.help}
+      </Button>
+      {isOpen && <Help />}
     </>
   );
 }

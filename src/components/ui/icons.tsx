@@ -1,6 +1,7 @@
 import {
   Menu,
   Search,
+  HelpCircle,
   ChevronUp,
   ChevronDown,
   ChevronRight,
@@ -15,6 +16,7 @@ import {
 const Icons = {
   menu: <Menu className="h-5 w-5" />,
   search: <Search className="h-5 w-5" />,
+  help: <HelpCircle className="h-5 w-5" />,
   chevronUp: <ChevronUp className="h-4 w-4 text-neutral-400" />,
   chevronDown: <ChevronDown className="h-4 w-4 text-neutral-400" />,
   chevronRight: <ChevronRight className="h-4 w-4 text-neutral-400" />,

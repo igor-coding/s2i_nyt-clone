@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 import { Button } from "@/components/ui/buttons";
-import { ToggleSidebar } from "@/components/ui/buttons";
-import { ToggleSearchbar } from "@/components/ui/buttons";
+import { BtnSidebar } from "@/components/ui/buttons";
+import { BtnSearchbar } from "@/components/ui/buttons";
+import { BtnHelp } from "@/components/ui/buttons";
 
 import Languages from "@/components/header/Languages";
 import GetCurrentDate from "@/components/header/Date";
@@ -15,8 +16,9 @@ export default function Header() {
       <header className="text-xs">
         <section className="flex items-center pt-2 pb-2 text-xxs">
           <div className="flex flex-1">
-            <ToggleSidebar />
-            <ToggleSearchbar />
+            <BtnSidebar />
+            <BtnSearchbar />
+            <BtnHelp />
           </div>
           <Languages />
           <div className="flex flex-1 justify-end space-x-4 items-center text-white">

@@ -1,5 +1,4 @@
 import Icons from "@/components/ui/icons";
-import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut";
 
 import { sidebar } from "@/data/sidebar";
 import { sidebar2 } from "@/data/sidebar";
