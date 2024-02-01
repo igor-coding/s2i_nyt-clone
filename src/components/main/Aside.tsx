@@ -1,8 +1,8 @@
 /*
-  TODO: Add these...
-        - Most Popular Articles
-        - Opinions
-        - Archive
+  TODO: Add these sections:
+  * Most Popular Articles
+  * Opinions
+  * Archive
 */
 
 export default function Aside() {
