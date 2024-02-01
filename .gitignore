@@ -16,9 +16,9 @@
 
 # misc
 *.pem
-# TODO.md
 .DS_Store
 **/.DS_Store
+TODO.md
 Session.vim
 
 # debug
