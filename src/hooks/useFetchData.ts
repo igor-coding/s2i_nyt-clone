@@ -12,7 +12,7 @@ export default function useFetchData({ queryKey, api, section }: QueryProps) {
     queryKey: [queryKey],
     queryFn: async () => {
       const { data } = await axios.get(
-        `https://api.nytimes.com/svc/${api}/v2/${section}.json?api-key=${process.env.NEXT_PUBLIC_TOP_STORIES_KEY}`,
+        `https://api.nytimes.com/svc/${api}/v2/${section}.json?api-key=${process.env.NEXT_PUBLIC_API_KEY}`,
       );
       return data.results;
     },
