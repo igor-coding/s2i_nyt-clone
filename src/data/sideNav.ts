@@ -1,10 +1,10 @@
-type Sidebar = {
+type SideNav = {
   id: number;
   text: string;
   href: string;
 };
 
-export const sidebar: Sidebar[] = [
+export const sideNav: SideNav[] = [
   {
     id: 0,
     text: "Home Page",
@@ -62,7 +62,7 @@ export const sidebar: Sidebar[] = [
   },
 ];
 
-export const sidebar2: Sidebar[] = [
+export const sideNav2: SideNav[] = [
   {
     id: 13,
     text: "Arts",

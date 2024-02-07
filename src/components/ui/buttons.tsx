@@ -1,3 +1,4 @@
+"use client";
 // REF: Make cleaner code
 // TODO: Add toggle dark mode button
 
@@ -8,7 +9,7 @@ import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut";
 
 import { cn } from "@/utils/cn";
 
-import Sidebar from "@/components/header/Sidebar";
+import SideNav from "@/components/header/SideNav";
 import Searchbar from "@/components/header/Searchbar";
 import Help from "@/components/header/Help";
 import Icons from "@/components/ui/icons";
@@ -54,7 +55,7 @@ export function HeaderButtons() {
       >
         {Icons.menu}
       </Button>
-      {menuToggle.isOpen && <Sidebar />}
+      {menuToggle.isOpen && <SideNav />}
 
       <Button
         type="button"

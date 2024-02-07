@@ -1,11 +1,11 @@
-import { sidebar } from "@/data/sidebar";
-import { sidebar2 } from "@/data/sidebar";
+import { sideNav } from "@/data/sideNav";
+import { sideNav2 } from "@/data/sideNav";
 
-export default function Sidebar() {
+export default function SideNav() {
   return (
     <nav className="absolute top-0 left-0 h-full w-60 z-10 bg-white dark:bg-black border-r border-r-neutral-200 dark:border-r-neutral-700 shadow-xl font-bold text-base">
       <ul className="m-4 pb-4 border-b border-neutral-200 dark:border-b-neutral-700">
-        {sidebar?.map((bar) => (
+        {sideNav?.map((bar) => (
           <li
             key={bar.id}
             className="py-px px-2 rounded hover:bg-sky-100 dark:hover:bg-sky-950 duration-150"
@@ -17,7 +17,7 @@ export default function Sidebar() {
         ))}
       </ul>
       <ul className="m-4 pb-4 border-b border-b-neutral-200 dark:border-b-neutral-700">
-        {sidebar2?.map((bar) => (
+        {sideNav2?.map((bar) => (
           <li
             key={bar.id}
             className="py-px px-2 rounded hover:bg-sky-100 dark:hover:bg-sky-950 duration-150"

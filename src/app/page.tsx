@@ -1,6 +1,6 @@
-"use client";
+// "use client";
 
-import { useFetchData } from "@/hooks/useFetchData";
+// import { useFetchData } from "@/hooks/useFetchData";
 
 import Article from "@/components/main/Article";
 import Aside from "@/components/main/Aside";
@@ -29,11 +29,11 @@ type MultimediaType = {
 };
 
 export default function Main() {
-  const { isPending, error, data } = useFetchData({
-    queryKey: "topstories",
-    api: "topstories",
-    section: "travel",
-  });
+  // const { isPending, error, data } = useFetchData({
+  //   queryKey: "topstories",
+  //   api: "topstories",
+  //   section: "travel",
+  // });
 
   // console.log(data);
 
