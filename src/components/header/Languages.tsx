@@ -5,11 +5,12 @@ export default function Languages() {
     <div className="flex flex-1 justify-center">
       <ul className="flex">
         {languges?.map((language) => (
-          <li
-            key={language.id}
-            className="py-[4px] px-[6px] rounded hover:bg-neutral-200 dark:hover:bg-neutral-800 duration-300 hover:duration-300"
-          >
-            <a lang={language.lang} href={language.href}>
+          <li key={language.id}>
+            <a
+              lang={language.lang}
+              href={language.href}
+              className="py-1.5 px-2 rounded hover:bg-neutral-200 dark:hover:bg-neutral-800 duration-300 hover:duration-300"
+            >
               {language.text}
             </a>
           </li>

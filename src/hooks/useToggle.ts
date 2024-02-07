@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-type UseToggle = {
+type UseToggleProps = {
   isOpen: boolean;
   handleToggle: () => void;
 };
 
-export const useToggle = (): UseToggle => {
+export const useToggle = (): UseToggleProps => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {

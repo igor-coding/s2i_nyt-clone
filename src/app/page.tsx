@@ -1,6 +1,6 @@
 "use client";
 
-import useFetchData from "@/hooks/useFetchData";
+import { useFetchData } from "@/hooks/useFetchData";
 
 import Article from "@/components/main/Article";
 import Aside from "@/components/main/Aside";
@@ -35,18 +35,19 @@ export default function Main() {
     section: "travel",
   });
 
-  console.log(data);
+  // console.log(data);
 
   /*
      TODO: Add these sections:
-     * Top Stories
-     * More News
+     * Top Stories (remove "Opinion" section)
+     * More News (remove "Opinion" section)
      * Books
   */
 
   return (
     <div className="py-4 grid grid-cols-4">
       <main className="col-span-3 border-r border-r-neutral-200 dark:border-r-neutral-700 pr-4">
+        <Article />
         <Article />
         {/* {isPending && <div>Loading...</div>} */}
         {/* {error && <div>Error</div>} */}

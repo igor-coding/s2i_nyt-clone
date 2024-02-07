@@ -1,3 +1,6 @@
+import { cn } from "@/utils/cn";
+import { noto_serif_display } from "@/components/ui/fonts";
+
 interface ArticleProps {
   title: string;
   abstract: string;
@@ -18,7 +21,7 @@ export default function Article({
   imgUrl,
 }: ArticleProps) {
   return (
-    <section className="pb-4 grid grid-cols-6 border-b border-b-black dark:border-b-white">
+    <section className="mb-4 pb-4 grid grid-cols-6 border-b border-b-black dark:border-b-white">
       <div className="col-span-2">
         <div className="grid gap-4 pb-4 border-b border-b-neutral-200 dark:border-b-neutral-700">
           <a
@@ -26,7 +29,12 @@ export default function Article({
             className="hover:text-neutral-500 hover:dark:text-neutral-300 duration-150"
           >
             <div className="grid gap-1">
-              <p className="font-semibold text-base">
+              <p
+                className={cn(
+                  "font-semibold text-lg",
+                  noto_serif_display.className,
+                )}
+              >
                 Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
                 sint cillum sint
               </p>
@@ -47,7 +55,12 @@ export default function Article({
             className="hover:text-neutral-500 hover:dark:text-neutral-300 duration-150"
           >
             <div className="grid gap-1">
-              <p className="font-semibold text-base">
+              <p
+                className={cn(
+                  "font-semibold text-base",
+                  noto_serif_display.className,
+                )}
+              >
                 Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
                 sint cillum sint
               </p>
@@ -68,14 +81,14 @@ export default function Article({
             className="hover:text-neutral-500 hover:dark:text-neutral-300 duration-150"
           >
             <div className="grid gap-1">
-              <p className="font-semibold text-base">
+              <p
+                className={cn(
+                  "font-semibold text-base",
+                  noto_serif_display.className,
+                )}
+              >
                 Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
                 sint cillum sint
-              </p>
-              <p className="text-sm text-neutral-600 dark:text-neutral-300">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Exercitationem rem commodi labore sed voluptates totam dicta
-                iure
               </p>
               <p className="text-xxs text-neutral-600 dark:text-neutral-300">
                 byline by someone

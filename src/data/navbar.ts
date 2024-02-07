@@ -35,9 +35,6 @@ export const navbar: Navbar[] = [
     href: "https://www.nytimes.com/section/opinion",
     text: "Opinion",
   },
-];
-
-export const navbar2: Navbar[] = [
   {
     id: 6,
     href: "https://www.nytimes.com/spotlight/podcasts",
@@ -64,3 +61,5 @@ export const navbar2: Navbar[] = [
     text: "The Athletic",
   },
 ];
+
+export default navbar;

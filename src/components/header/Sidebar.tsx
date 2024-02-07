@@ -1,5 +1,3 @@
-import Icons from "@/components/ui/icons";
-
 import { sidebar } from "@/data/sidebar";
 import { sidebar2 } from "@/data/sidebar";
 
@@ -14,7 +12,6 @@ export default function Sidebar() {
           >
             <a href={bar.href} className="flex justify-between items-center">
               {bar.text}
-              {Icons.chevronRight}
             </a>
           </li>
         ))}
@@ -27,7 +24,6 @@ export default function Sidebar() {
           >
             <a href={bar.href} className="flex justify-between items-center">
               {bar.text}
-              {Icons.chevronRight}
             </a>
           </li>
         ))}
@@ -38,7 +34,6 @@ export default function Sidebar() {
           className="px-2 flex justify-between items-center"
         >
           More
-          {Icons.chevronRight}
         </a>
       </div>
     </nav>

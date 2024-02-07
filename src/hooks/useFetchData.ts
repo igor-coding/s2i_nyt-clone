@@ -1,13 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-interface QueryProps {
+interface FetchDataProps {
   queryKey: string;
   api: string;
   section: string;
 }
 
-export default function useFetchData({ queryKey, api, section }: QueryProps) {
+export const useFetchData = ({ queryKey, api, section }: FetchDataProps) => {
   return useQuery({
     queryKey: [queryKey],
     queryFn: async () => {
@@ -17,4 +17,4 @@ export default function useFetchData({ queryKey, api, section }: QueryProps) {
       return data.results;
     },
   });
-}
+};

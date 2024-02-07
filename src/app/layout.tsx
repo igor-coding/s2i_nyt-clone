@@ -30,7 +30,7 @@ export default function RootLayout({
       </Head>
       <body
         className={cn(
-          "overflow-x-hidden max-w-7xl mx-auto h-full bg-white text-black dark:bg-black dark:text-white",
+          "overflow-x-hidden max-w-[1350px] mx-auto px-5 bg-white text-black dark:bg-black dark:text-white",
           albert_sans.className,
         )}
       >

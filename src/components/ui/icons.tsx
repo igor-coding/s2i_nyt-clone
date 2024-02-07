@@ -5,10 +5,10 @@ import {
   ChevronUp,
   ChevronDown,
   ChevronRight,
+  ChevronLeftCircle,
+  ChevronRightCircle,
   MoveUp,
   MoveDown,
-  ArrowLeftCircle,
-  ArrowRightCircle,
   PlayCircle,
   Dot,
 } from "lucide-react";
@@ -20,14 +20,12 @@ const Icons = {
   chevronUp: <ChevronUp className="h-4 w-4 text-neutral-400" />,
   chevronDown: <ChevronDown className="h-4 w-4 text-neutral-400" />,
   chevronRight: <ChevronRight className="h-4 w-4 text-neutral-400" />,
+  chevronLeftCircle: (
+    <ChevronLeftCircle className="h-6 w-6 hover:fill-neutral-300 dark:hover:fill-neutral-600 duration-150" />
+  ),
+  chevronRightCircle: <ChevronRightCircle className="h-6 w-6" />,
   moveUp: <MoveUp className="h-2.5 w-2.5" />,
   moveDown: <MoveDown className="h-2.5 w-2.5" />,
-  arrowLeftCircle: (
-    <ArrowLeftCircle className="h-5 w-5 hover:fill-neutral-100 dark:hover:fill-neutral-900" />
-  ),
-  arrowRightCircle: (
-    <ArrowRightCircle className="h-5 w-5 hover:fill-neutral-100 dark:hover:fill-neutral-900" />
-  ),
   play: (
     <PlayCircle className="h-5 w-5 hover:fill-neutral-100 dark:hover:fill-neutral-900" />
   ),
