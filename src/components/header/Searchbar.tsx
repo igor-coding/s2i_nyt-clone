@@ -27,27 +27,22 @@ export default function Searchbar() {
           <input
             type="search"
             name="q"
-            placeholder="SEARCH"
+            placeholder="search"
             value={searchValue}
             ref={searchInput}
             onChange={handleInputChange}
-            className="placeholder:text-neutral-400"
+            className="placeholder:uppercase placeholder:text-neutral-400"
           />
           {searchValue && (
             <input
               type="reset"
-              value="CLEAR"
+              value="clear"
               onClick={handleResetClick}
-              className="absolute pl-1 text-xxs text-neutral-400 cursor-pointer"
+              className="absolute pl-1 text-xxs text-neutral-400 cursor-pointer uppercase"
             />
           )}
         </div>
-        <Button
-          type="submit"
-          className="bg-accent hover:bg-accentHover font-bold text-xxs text-white"
-        >
-          GO
-        </Button>
+        <Button type="submit">go</Button>
       </form>
     </div>
   );

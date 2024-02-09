@@ -9,7 +9,7 @@ export default function Languages() {
             <a
               lang={language.lang}
               href={language.href}
-              className="py-1.5 px-2 rounded hover:bg-neutral-200 dark:hover:bg-neutral-800 duration-300 hover:duration-300"
+              className="py-1.5 px-2 rounded hover:bg-neutral-200 dark:hover:bg-neutral-800 duration-300 hover:duration-300 uppercase"
             >
               {language.text}
             </a>

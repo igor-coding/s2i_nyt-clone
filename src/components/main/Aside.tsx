@@ -31,7 +31,7 @@ export default function Aside({
   imgUrl,
 }: AsideProps) {
   return (
-    <aside className="pl-4">
+    <aside className="col-span-4 sm:col-span-1 pl-4">
       <section className="mb-4 pb-4 border-b border-b-black dark:border-b-white">
         <div>
           <a

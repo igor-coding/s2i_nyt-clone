@@ -9,6 +9,8 @@ export const metadata = {
   // icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+// import { ThemeProvider } from "next-themes";
+
 import { cn } from "@/utils/cn";
 
 import Header from "@/components/header/Header";
@@ -27,9 +29,12 @@ export default function RootLayout({
           albert_sans.className,
         )}
       >
+        {/* <ThemeProvider attribute="class"> */}
+        {/* TODO: Render `Header` only if in Home Page else render `SectionHeader` */}
         <Header />
         {children}
         <Footer />
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

@@ -1,64 +1,64 @@
 type Navbar = {
   id: number;
-  href: string;
+  link: string;
   text: string;
 };
 
 export const navbar: Navbar[] = [
   {
     id: 0,
-    href: "https://www.nytimes.com/section/us",
-    text: "U.S.",
+    link: "us",
+    text: "u.s.",
   },
   {
     id: 1,
-    href: "https://www.nytimes.com/section/world",
-    text: "World",
+    link: "world",
+    text: "world",
   },
   {
     id: 2,
-    href: "https://www.nytimes.com/section/business",
-    text: "Business",
+    link: "business",
+    text: "business",
   },
   {
     id: 3,
-    href: "https://www.nytimes.com/section/arts",
-    text: "Arts",
+    link: "arts",
+    text: "arts",
   },
   {
     id: 4,
-    href: "https://www.nytimes.com/spotlight/lifestyle",
-    text: "Lifestyle",
+    link: "lifestyle",
+    text: "lifestyle",
   },
   {
     id: 5,
-    href: "https://www.nytimes.com/section/opinion",
-    text: "Opinion",
+    link: "opinion",
+    text: "opinion",
   },
   {
     id: 6,
-    href: "https://www.nytimes.com/spotlight/podcasts",
-    text: "Audio",
+    link: "podcasts",
+    text: "audio",
   },
   {
     id: 7,
-    href: "https://www.nytimes.com/crosswords",
-    text: "Games",
+    link: "crosswords",
+    text: "games",
   },
   {
     id: 8,
-    href: "https://cooking.nytimes.com/",
-    text: "Cooking",
+    link: "https://cooking.nytimes.com/",
+    text: "cooking",
   },
   {
     id: 9,
-    href: "https://www.nytimes.com/wirecutter/",
-    text: "Wirecutter",
+    link: "https://www.nytimes.com/wirecutter/",
+    text: "wirecutter",
   },
   {
     id: 10,
-    href: "https://theathletic.com/",
-    text: "The Athletic",
+    link: "https://theathletic.com/",
+    text: "the athletic",
   },
 ];
 

@@ -49,6 +49,8 @@ export default function Main() {
       <main className="col-span-3 border-r border-r-neutral-200 dark:border-r-neutral-700 pr-4">
         <Article />
         <Article />
+        <Article />
+        <Article />
         {/* {isPending && <div>Loading...</div>} */}
         {/* {error && <div>Error</div>} */}
         {/* {data && <div>{data[1].title}</div>} */}
