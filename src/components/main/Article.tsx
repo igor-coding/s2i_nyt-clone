@@ -1,25 +1,26 @@
 import { cn } from "@/utils/cn";
 import { noto_serif_display } from "@/components/ui/fonts";
 
-interface ArticleProps {
-  title: string;
-  abstract: string;
-  byline: string;
-  url: string;
-  multimedia: string;
-  copyright: string;
-  imgUrl: string;
-}
+// interface ArticleProps {
+//   title: string;
+//   abstract: string;
+//   byline: string;
+//   url: string;
+//   multimedia: string;
+//   copyright: string;
+//   imgUrl: string;
+// }
 
-export default function Article({
-  title,
-  abstract,
-  byline,
-  url,
-  multimedia,
-  copyright,
-  imgUrl,
-}: ArticleProps) {
+// export default function Article({
+//   title,
+//   abstract,
+//   byline,
+//   url,
+//   multimedia,
+//   copyright,
+//   imgUrl,
+// }: ArticleProps) {
+export default function Article() {
   return (
     <section className="mb-4 pb-4 grid grid-cols-6 border-b border-b-black dark:border-b-white">
       <div className="col-span-2">
@@ -101,7 +102,7 @@ export default function Article({
         <figure className="w-full">
           <img
             src="https://static01.nyt.com/images/2024/01/31/multimedia/31boeing-cptz/31boeing-cptz-threeByTwoSmallAt2X.jpg"
-            alt={title}
+            alt="image"
           />
           <figcaption className="pt-2 text-xxs text-neutral-800 dark:text-neutral-300">
             copyright
