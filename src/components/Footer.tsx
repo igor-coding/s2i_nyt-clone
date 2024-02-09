@@ -20,7 +20,7 @@ export default function Footer() {
       </a>
       <a href="https://igorfiorio.com">
         <p className="leading-4">
-          © {new Date().getFullYear()} <br />
+          2024 <br />
           <strong>by Igor Fiorio</strong>
         </p>
       </a>

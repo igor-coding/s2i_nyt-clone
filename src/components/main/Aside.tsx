@@ -116,21 +116,11 @@ export default function Aside({
                 </h3>
               </a>
               <div className="flex gap-2">
-                <button type="button">{Icons.chevronLeftCircle}</button>
-                <button type="button">
-                  {/* <svg viewBox="0 0 26 26"> */}
-                  {/*   <circle */}
-                  {/*     cx="13" */}
-                  {/*     cy="13" */}
-                  {/*     r="12.5" */}
-                  {/*     stroke="var(--color-stroke-quaternary,#DFDFDF)" */}
-                  {/*   /> */}
-                  {/*   <path */}
-                  {/*     d="M10.3984 7.7998L15.5984 12.9998L10.3984 18.1998" */}
-                  {/*     stroke-width="1.5" */}
-                  {/*     fill="none" */}
-                  {/*   /> */}
-                  {/* </svg> */}
+                <button type="button" aria-label="Previous">
+                  {Icons.chevronLeft}
+                </button>
+                <button type="button" aria-label="Next">
+                  {Icons.chevronRight}
                 </button>
               </div>
             </div>
