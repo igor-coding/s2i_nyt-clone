@@ -11,25 +11,26 @@ import { Button } from "@/components/ui/buttons";
   * Archive: "In Case You Missed It" (no "Opinion" section)
 */
 
-interface AsideProps {
-  title: string;
-  abstract: string;
-  byline: string;
-  url: string;
-  multimedia: string;
-  copyright: string;
-  imgUrl: string;
-}
+// interface AsideProps {
+//   title: string;
+//   abstract: string;
+//   byline: string;
+//   url: string;
+//   multimedia: string;
+//   copyright: string;
+//   imgUrl: string;
+// }
 
-export default function Aside({
-  title,
-  abstract,
-  byline,
-  url,
-  multimedia,
-  copyright,
-  imgUrl,
-}: AsideProps) {
+// export default function Aside({
+//   title,
+//   abstract,
+//   byline,
+//   url,
+//   multimedia,
+//   copyright,
+//   imgUrl,
+// }: AsideProps) {
+export default function Aside() {
   return (
     <aside className="col-span-4 sm:col-span-1 pl-4">
       <section className="mb-4 pb-4 border-b border-b-black dark:border-b-white">
@@ -41,7 +42,7 @@ export default function Aside({
             <img
               src="https://static01.nyt.com/images/2024/02/24/reader-center/24-CURB-HP-PROMO-COVER/24-CURB-HP-PROMO-COVER-threeByTwoMediumAt2X.png"
               className="w-full"
-              alt={title}
+              alt="alt"
             />
             <div>
               <p
@@ -83,7 +84,7 @@ export default function Aside({
               >
                 <img
                   src="https://static01.nyt.com/images/2024/02/24/reader-center/24-CURB-HP-PROMO-COVER/24-CURB-HP-PROMO-COVER-threeByTwoMediumAt2X.png"
-                  alt={title}
+                  alt="alt"
                 />
                 <div>
                   <p
@@ -105,7 +106,7 @@ export default function Aside({
               >
                 <img
                   src="https://static01.nyt.com/images/2024/02/24/reader-center/24-CURB-HP-PROMO-COVER/24-CURB-HP-PROMO-COVER-threeByTwoMediumAt2X.png"
-                  alt={title}
+                  alt="alt"
                 />
                 <div>
                   <p
@@ -148,7 +149,7 @@ export default function Aside({
             <img
               src="https://static01.nyt.com/images/2018/04/02/opinion/maureen-dowd/maureen-dowd-thumbLarge.png?format=pjpg&quality=75&auto=webp&disable=upscale"
               className="w-12"
-              alt={title}
+              alt="alt"
             />
           </div>
         </a>

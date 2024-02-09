@@ -102,7 +102,7 @@ export default function Article() {
         <figure className="w-full">
           <img
             src="https://static01.nyt.com/images/2024/01/31/multimedia/31boeing-cptz/31boeing-cptz-threeByTwoSmallAt2X.jpg"
-            alt="image"
+            alt="alt"
           />
           <figcaption className="pt-2 text-xxs text-neutral-800 dark:text-neutral-300">
             copyright
