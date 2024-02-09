@@ -65,6 +65,17 @@ export default function Aside({
         {/* FEAT: Make a carousel of 4 elements and add 2 buttons for next and previous */}
         <div>
           <div className="grid grid-cols-2">
+            <div className="pb-4 col-span-2 flex justify-between items-center">
+              <a href="/">
+                <h3 className="font-semibold text-sm hover:text-neutral-500 hover:dark:text-neutral-300 duration-150">
+                  Most Popular
+                </h3>
+              </a>
+              <div className="flex gap-2">
+                <button type="button">{Icons.chevronLeft}</button>
+                <button type="button">{Icons.chevronRight}</button>
+              </div>
+            </div>
             <div className="pr-4 border-r border-r-neutral-200 dark:border-r-neutral-700">
               <a
                 href="/"
@@ -109,25 +120,11 @@ export default function Aside({
                 </div>
               </a>
             </div>
-            <div className="pt-2 col-span-2 flex justify-between items-center">
-              <a href="/">
-                <h3 className="font-semibold hover:text-neutral-500 hover:dark:text-neutral-300 duration-150">
-                  Most Popular
-                </h3>
-              </a>
-              <div className="flex gap-2">
-                <button type="button" aria-label="Previous">
-                  {Icons.chevronLeft}
-                </button>
-                <button type="button" aria-label="Next">
-                  {Icons.chevronRight}
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </section>
       <section>
+        {/* TODO: Make an horizontal line */}
         <div className="pb-4">
           <a href="https://www.nytimes.com/section/opinion">
             <h2 className="font-bold text-sm hover:text-neutral-500 hover:dark:text-neutral-300 duration-150">
