@@ -1,7 +1,8 @@
 import {
+  Sun,
+  Moon,
   Menu,
   Search,
-  HelpCircle,
   ChevronUp,
   ChevronDown,
   MoveUp,
@@ -11,9 +12,10 @@ import {
 } from "lucide-react";
 
 const Icons = {
+  sun: <Sun className="h-5 w-5" />,
+  moon: <Moon className="h-5 w-5" />,
   menu: <Menu className="h-5 w-5" />,
   search: <Search className="h-5 w-5" />,
-  help: <HelpCircle className="h-5 w-5" />,
   chevronUp: <ChevronUp className="h-4 w-4 text-neutral-400" />,
   chevronDown: <ChevronDown className="h-4 w-4 text-neutral-400" />,
   moveUp: <MoveUp className="h-2.5 w-2.5" />,

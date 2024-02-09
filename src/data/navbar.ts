@@ -1,63 +1,63 @@
 type Navbar = {
   id: number;
-  link: string;
+  path: string;
   text: string;
 };
 
 export const navbar: Navbar[] = [
   {
     id: 0,
-    link: "us",
+    path: "us",
     text: "u.s.",
   },
   {
     id: 1,
-    link: "world",
+    path: "world",
     text: "world",
   },
   {
     id: 2,
-    link: "business",
+    path: "business",
     text: "business",
   },
   {
     id: 3,
-    link: "arts",
+    path: "arts",
     text: "arts",
   },
   {
     id: 4,
-    link: "lifestyle",
+    path: "lifestyle",
     text: "lifestyle",
   },
   {
     id: 5,
-    link: "opinion",
+    path: "opinion",
     text: "opinion",
   },
   {
     id: 6,
-    link: "podcasts",
+    path: "podcasts",
     text: "audio",
   },
   {
     id: 7,
-    link: "crosswords",
+    path: "crosswords",
     text: "games",
   },
   {
     id: 8,
-    link: "https://cooking.nytimes.com/",
+    path: "https://cooking.nytimes.com/",
     text: "cooking",
   },
   {
     id: 9,
-    link: "https://www.nytimes.com/wirecutter/",
+    path: "https://www.nytimes.com/wirecutter/",
     text: "wirecutter",
   },
   {
     id: 10,
-    link: "https://theathletic.com/",
+    path: "https://theathletic.com/",
     text: "the athletic",
   },
 ];

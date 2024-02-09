@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import { Button } from "@/components/ui/buttons";
-import { BtnHeader } from "@/components/ui/buttons";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
+import Searchbar from "@/components/header/Searchbar";
 import { BtnActions } from "@/components/ui/buttons";
 
 import Languages from "@/components/header/Languages";
@@ -12,7 +12,10 @@ export default function Header() {
   return (
     <header className="w-full border-double border-b-4 border-black dark:border-white text-xs">
       <section className="flex items-center pt-2 pb-2 text-xxs">
-        <BtnHeader />
+        <div className="flex flex-1">
+          <ThemeSwitcher />
+          <Searchbar />
+        </div>
         <Languages />
         <BtnActions />
       </section>

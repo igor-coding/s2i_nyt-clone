@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 
+import { Providers } from "@/app/providers";
 import { albert_sans } from "@/components/ui/fonts";
 
 export const metadata = {
@@ -8,8 +9,6 @@ export const metadata = {
   // TODO: Add favicon
   // icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
-
-// import { ThemeProvider } from "next-themes";
 
 import { cn } from "@/utils/cn";
 
@@ -22,19 +21,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           "overflow-x-hidden max-w-[1350px] mx-auto px-5 bg-white text-black dark:bg-black dark:text-white",
           albert_sans.className,
         )}
       >
-        {/* <ThemeProvider attribute="class"> */}
-        {/* TODO: Render `Header` only if in Home Page else render `SectionHeader` */}
-        <Header />
-        {children}
-        <Footer />
-        {/* </ThemeProvider> */}
+        <Providers>
+          {/* TODO: Render `Header` only if in Home Page else render `SectionHeader` */}
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

@@ -9,7 +9,7 @@ export default function Navbar() {
         {navbar?.map((nav) => (
           <li key={nav.id} className="flex items-center">
             <Link
-              href={`/section/${nav.link}`}
+              href={`/section/${nav.path}`}
               className="py-1.5 px-2 rounded hover:bg-neutral-200 dark:hover:bg-neutral-800 duration-300 hover:duration-300 capitalize"
             >
               {nav.text}

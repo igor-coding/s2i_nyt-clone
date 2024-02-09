@@ -21,7 +21,14 @@ export default function Footer() {
       <a href="https://igorfiorio.com">
         <p className="leading-4">
           2024 <br />
-          <strong>by Igor Fiorio</strong>
+          <strong
+            className="relative before:content-[''] before:absolute before:block before:w-full before:h-px 
+              before:bottom-0 before:left-0 before:bg-black dark:before:bg-white
+              before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+              before:transition before:ease-in-out before:duration-300"
+          >
+            by Igor Fiorio
+          </strong>
         </p>
       </a>
     </footer>

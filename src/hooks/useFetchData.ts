@@ -1,13 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-interface FetchDataProps {
-  queryKey: string;
-  api: string;
-  section: string;
-}
+import { UseFetchDataProps } from "@/types/ButtonProps";
 
-export const useFetchData = ({ queryKey, api, section }: FetchDataProps) => {
+export const useFetchData = ({ queryKey, api, section }: UseFetchDataProps) => {
   return useQuery({
     queryKey: [queryKey],
     queryFn: async () => {
