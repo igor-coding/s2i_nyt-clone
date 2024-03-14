@@ -5,7 +5,7 @@ type Language = {
   text: string;
 };
 
-const languages: Language[] = [
+export const languages: Language[] = [
   {
     id: 0,
     lang: "en-US",
@@ -37,5 +37,3 @@ const languages: Language[] = [
     text: "中文",
   },
 ];
-
-export default languages;

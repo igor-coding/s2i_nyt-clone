@@ -3,6 +3,7 @@
 - Add a dark mode toggle button with the manual tailwind
 - Create folders for all the nav sections
 - Add a `404 not found` page
+- Map `stocks` section
 
 ---
 
@@ -22,5 +23,6 @@
 
 # README
 
+- Explain why this complex file structure for the project
 - Scrivere del perchè ho inserito gli indici in ts al posto che fetcharli da un API
   (perchè, avendo un limite di fecthing, ho preferito che gli indici rimanessero sempre attivi)

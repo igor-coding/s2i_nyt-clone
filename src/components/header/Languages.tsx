@@ -1,10 +1,10 @@
-import languges from "@/data/languages";
+import { languages } from "@/data/languages";
 
 export default function Languages() {
   return (
     <div className="flex flex-1 justify-center">
       <ul className="flex">
-        {languges?.map((language) => (
+        {languages?.map((language) => (
           <li key={language.id}>
             <a
               lang={language.lang}

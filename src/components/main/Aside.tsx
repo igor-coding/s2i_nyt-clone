@@ -1,9 +1,6 @@
 import { cn } from "@/utils/cn";
 import { noto_serif_display } from "@/components/ui/fonts";
 
-import Icons from "@/components/ui/icons";
-import { Button } from "@/components/ui/buttons";
-
 /*
   TODO: Add these sections:
   * Most Popular (remove "Opinion" section)
@@ -11,30 +8,12 @@ import { Button } from "@/components/ui/buttons";
   * Archive: "In Case You Missed It" (no "Opinion" section)
 */
 
-// interface AsideProps {
-//   title: string;
-//   abstract: string;
-//   byline: string;
-//   url: string;
-//   multimedia: string;
-//   copyright: string;
-//   imgUrl: string;
-// }
-
-// export default function Aside({
-//   title,
-//   abstract,
-//   byline,
-//   url,
-//   multimedia,
-//   copyright,
-//   imgUrl,
-// }: AsideProps) {
+// FEAT: If `isLoading` return simple rectangles as placeholders pulsing
 export default function Aside() {
   return (
-    <aside className="col-span-4 sm:col-span-1 pl-4">
-      <section className="mb-4 pb-4 border-b border-b-black dark:border-b-white">
-        <div>
+    <aside className="border-l border-neutral-200 dark:border-neutral-700 my-8 pl-4 divide-y divide-black dark:divide-white">
+      <section className="pb-4">
+        <div className="after:content-[''] after:block after:h-px after:w-full after:bg-neutral-200 dark:after:bg-neutral-700 after:my-4">
           <a
             href="/"
             className="hover:text-neutral-500 hover:dark:text-neutral-300 duration-150"
@@ -62,7 +41,6 @@ export default function Aside() {
             </div>
           </a>
         </div>
-        <hr className="my-4 border-neutral-200 dark:border-neutral-700" />
         {/* FEAT: Make a carousel of 4 elements and add 2 buttons for next and previous */}
         <div>
           <div className="grid grid-cols-2">
@@ -72,10 +50,6 @@ export default function Aside() {
                   Most Popular
                 </h3>
               </a>
-              <div className="flex gap-2">
-                <button type="button">{Icons.chevronLeft}</button>
-                <button type="button">{Icons.chevronRight}</button>
-              </div>
             </div>
             <div className="pr-4 border-r border-r-neutral-200 dark:border-r-neutral-700">
               <a
@@ -124,7 +98,7 @@ export default function Aside() {
           </div>
         </div>
       </section>
-      <section>
+      <section className="py-4">
         {/* TODO: Make an horizontal line */}
         <div className="pb-4">
           <a href="https://www.nytimes.com/section/opinion">
@@ -153,7 +127,41 @@ export default function Aside() {
             />
           </div>
         </a>
-        <hr className="my-4 border-neutral-200 dark:border-neutral-700" />
+      </section>
+      <section className="pt-4">
+        <div className="pb-4">
+          <a href="/">
+            <h2 className="font-bold text-sm hover:text-neutral-500 hover:dark:text-neutral-300 duration-150">
+              In Case You Missed It
+            </h2>
+          </a>
+        </div>
+        <a
+          href="/"
+          className="hover:text-neutral-500 hover:dark:text-neutral-300 duration-150"
+        >
+          <div className="grid grid-cols-6 gap-4">
+            <div className="col-span-4">
+              <p
+                className={cn(
+                  "pb-1 font-semibold text-sm",
+                  noto_serif_display.className,
+                )}
+              >
+                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+              </p>
+              <p className="text-xxs text-neutral-600 dark:text-neutral-300">
+                byline by someone
+              </p>
+            </div>
+            <div className="col-span-2">
+              <img
+                src="https://static01.nyt.com/images/2024/02/20/well/20PRESIDENTIAL-FITNESS-TEST4/20PRESIDENTIAL-FITNESS-TEST4-square320-v2.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"
+                alt="alt"
+              />
+            </div>
+          </div>
+        </a>
       </section>
     </aside>
   );

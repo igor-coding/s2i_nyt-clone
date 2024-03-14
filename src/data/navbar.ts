@@ -7,42 +7,42 @@ type Navbar = {
 export const navbar: Navbar[] = [
   {
     id: 0,
-    path: "us",
+    path: "/us",
     text: "u.s.",
   },
   {
     id: 1,
-    path: "world",
+    path: "/world",
     text: "world",
   },
   {
     id: 2,
-    path: "business",
+    path: "/business",
     text: "business",
   },
   {
     id: 3,
-    path: "arts",
+    path: "/arts",
     text: "arts",
   },
   {
     id: 4,
-    path: "lifestyle",
+    path: "/lifestyle",
     text: "lifestyle",
   },
   {
     id: 5,
-    path: "opinion",
+    path: "/opinion",
     text: "opinion",
   },
   {
     id: 6,
-    path: "podcasts",
+    path: "/podcasts",
     text: "audio",
   },
   {
     id: 7,
-    path: "crosswords",
+    path: "/crosswords",
     text: "games",
   },
   {

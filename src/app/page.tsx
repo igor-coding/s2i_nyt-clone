@@ -1,42 +1,22 @@
-// "use client";
+"use client";
 
-// import { useFetchData } from "@/hooks/useFetchData";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-import Article from "@/components/main/Article";
+import Header from "@/components/header/Header";
+import TopStories from "@/components/main/TopStories";
 import Aside from "@/components/main/Aside";
 
-type ResponseType = {
-  status: string;
-  section: string;
-  results: ResultType[];
-};
-
-type ResultType = {
-  section: string;
-  subsection: string;
-  title: string;
-  abstract: string;
-  url: string;
-  byline: string;
-  multimedia: MultimediaType[];
-};
-
-type MultimediaType = {
-  url: string;
-  width: number;
-  caption: string;
-  copyright: string;
-};
+const queryClient = new QueryClient();
 
 export default function Main() {
-  // const { isPending, error, data } = useFetchData({
-  //   queryKey: "topstories",
-  //   api: "topstories",
-  //   section: "travel",
-  // });
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Home />
+    </QueryClientProvider>
+  );
+}
 
-  // console.log(data);
-
+export function Home() {
   /*
      TODO: Add these sections:
      * Top Stories (remove "Opinion" section)
@@ -45,18 +25,37 @@ export default function Main() {
   */
 
   return (
-    <div className="py-4 grid grid-cols-4">
-      <main className="col-span-3 border-r border-r-neutral-200 dark:border-r-neutral-700 pr-4">
-        <Article />
-        <Article />
-        <Article />
-        <Article />
-        {/* {isPending && <div>Loading...</div>} */}
-        {/* {error && <div>Error</div>} */}
-        {/* {data && <div>{data[1].title}</div>} */}
-        {/* {data && <div>{data[1].section}</div>} */}
-      </main>
-      <Aside />
-    </div>
+    <>
+      <Header />
+      <div className="grid grid-cols-4 gap-4">
+        <main className="col-span-3 divide-y divide-black dark:divide-white">
+          <TopStories
+            startLongArticle={0}
+            endLongArticle={2}
+            startShortArticle={2}
+            endShortArticle={3}
+            startMultimedia={0}
+            endMultimedia={1}
+          />
+          <TopStories
+            startLongArticle={3}
+            endLongArticle={5}
+            startShortArticle={5}
+            endShortArticle={6}
+            startMultimedia={3}
+            endMultimedia={4}
+          />
+          <TopStories
+            startLongArticle={6}
+            endLongArticle={8}
+            startShortArticle={8}
+            endShortArticle={9}
+            startMultimedia={6}
+            endMultimedia={7}
+          />
+        </main>
+        <Aside />
+      </div>
+    </>
   );
 }

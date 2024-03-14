@@ -2,56 +2,51 @@
 
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { useLongPress } from "@uidotdev/usehooks";
 import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut";
 
-import Image from "next/image";
 import Icons from "@/components/ui/icons";
-
 import { Button } from "@/components/ui/buttons";
 
 export default function ThemeSwitch() {
+  const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const { setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
 
-  const toggleTheme = () => {
-    if (resolvedTheme === "dark") {
-      setTheme("light");
-    } else {
-      setTheme("dark");
+  const toggleTheme = () =>
+    resolvedTheme === "light" ? setTheme("dark") : setTheme("light");
+
+  const attrs = useLongPress(() => {
+    if (resolvedTheme !== "system") {
+      setTheme("system");
     }
-  };
+  });
 
   useKeyboardShortcut(["ctrl", "d"], toggleTheme);
+  useKeyboardShortcut(["ctrl", "a"], () => setTheme("system"));
 
-  if (!mounted)
+  if (!mounted) {
     return (
-      <span className="py-2 px-2.5">
-        <Image
-          src="data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
-          width={20}
-          height={20}
-          alt="Loading Light/Dark Toggle"
-          title="Loading Light/Dark Toggle"
-          priority={false}
-        />
+      <span title="Theme switcher" className="py-2 px-2.5 cursor-not-allowed">
+        {Icons.boxSelect}
       </span>
     );
+  }
 
-  if (resolvedTheme === "dark") {
+  if (theme === "system") {
     return (
       <Button type="button" onClick={toggleTheme}>
-        {Icons.sun}
+        {Icons.sunMoon}
       </Button>
     );
   }
 
-  if (resolvedTheme === "light") {
-    return (
-      <Button type="button" onClick={toggleTheme}>
-        {Icons.moon}
+  return (
+    <>
+      <Button {...attrs} type="button" onClick={toggleTheme}>
+        {resolvedTheme === "light" ? Icons.moon : Icons.sun}
       </Button>
-    );
-  }
+    </>
+  );
 }

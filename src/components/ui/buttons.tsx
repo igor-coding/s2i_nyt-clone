@@ -1,6 +1,10 @@
 "use client";
 
-import { ButtonProps } from "@/types/ButtonProps";
+import { useToggle } from "@/hooks/useToggle";
+import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut";
+
+import type { ButtonProps } from "@/types";
+import Icons from "@/components/ui/icons";
 
 export function Button({
   type,
@@ -16,7 +20,7 @@ export function Button({
   return (
     <button
       type={type}
-      className={`rounded py-2 px-2.5 duration-300 ${hasText} ${className}`}
+      className={`rounded px-2.5 py-2 duration-300 ${hasText} ${className}`}
       {...props}
     >
       {children}
@@ -24,9 +28,19 @@ export function Button({
   );
 }
 
+export function BtnSearch() {
+  useKeyboardShortcut(["ctrl", "s"], useToggle);
+
+  return (
+    <Button type="button" onClick={useToggle}>
+      {Icons.search}
+    </Button>
+  );
+}
+
 export function BtnActions() {
   return (
-    <div className="flex flex-1 justify-end space-x-4 items-center text-white">
+    <div className="flex flex-1 items-center justify-end space-x-4 text-white">
       <Button type="button">subscribe for €0.50/week</Button>
       <Button type="button">log in</Button>
     </div>

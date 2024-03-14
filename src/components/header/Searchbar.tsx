@@ -7,22 +7,22 @@ import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut";
 import { Button } from "@/components/ui/buttons";
 import Icons from "@/components/ui/icons";
 
-export const autoFocus = () => {
+export const autoFocus = (isOpen: boolean) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (inputRef.current) {
+    if (isOpen && inputRef.current) {
       inputRef.current.focus();
     }
-  }, []);
+  }, [isOpen]);
 
   return inputRef;
 };
 
 export default function Searchbar() {
   const [searchValue, setSearchValue] = useState("");
-  const searchInput = autoFocus();
   const { isOpen, handleToggle } = useToggle();
+  const searchInput = autoFocus(isOpen);
 
   const handleInputChange = (e: React.FormEvent<HTMLInputElement>) => {
     setSearchValue(e.currentTarget.value);
@@ -46,7 +46,7 @@ export default function Searchbar() {
           action="/search"
           className="flex items-center space-x-1"
         >
-          <div className="py-1 pl-2 pr-12 text-base border rounded border-neutral-500 focus-within:border-1 focus-within:border-black focus-within:shadow dark:focus-within:border-white">
+          <div className="bg-white dark:bg-black py-1 pl-2 pr-12 text-base border rounded border-neutral-500 focus-within:border-1 focus-within:border-black focus-within:shadow dark:focus-within:border-white">
             <input
               type="search"
               name="q"

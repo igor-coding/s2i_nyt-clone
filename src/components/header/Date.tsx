@@ -1,5 +1,4 @@
 const currentDate = new Date();
-
 const formattedDate = new Intl.DateTimeFormat("en-US", {
   weekday: "long",
   year: "numeric",

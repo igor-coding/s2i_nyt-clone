@@ -12,7 +12,6 @@ export const metadata = {
 
 import { cn } from "@/utils/cn";
 
-import Header from "@/components/header/Header";
 import Footer from "@/components/Footer";
 
 export default function RootLayout({
@@ -30,7 +29,7 @@ export default function RootLayout({
       >
         <Providers>
           {/* TODO: Render `Header` only if in Home Page else render `SectionHeader` */}
-          <Header />
+          {/* <Header /> */}
           {children}
           <Footer />
         </Providers>
