@@ -1,6 +1,6 @@
-import { Noto_Serif_Display, Albert_Sans } from "next/font/google";
+import { Noto_Serif, Albert_Sans } from "next/font/google";
 
-export const noto_serif_display = Noto_Serif_Display({
+export const noto_serif = Noto_Serif({
   subsets: ["latin"],
 });
 

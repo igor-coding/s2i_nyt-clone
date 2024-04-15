@@ -2,10 +2,9 @@ import Image from "next/image";
 import poweredbyNytLight from "../../public/poweredby-nyt_light.png";
 import poweredbyNytDark from "../../public/poweredby-nyt_dark.png";
 
-// FIX: `poweredby` is not changing color when dark mode is manual toggled
 export default function Footer() {
   return (
-    <footer className="mb-2 pt-4 border-double border-t-4 border-t-black dark:border-t-white flex justify-between text-end">
+    <footer className="p-6 lg:p-0 lg:mb-2 lg:pt-4 border-double border-t-4 border-t-black dark:border-t-white flex items-center justify-between text-end">
       <a href="https://developer.nytimes.com">
         <picture>
           <source

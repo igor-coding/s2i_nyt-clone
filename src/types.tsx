@@ -9,65 +9,43 @@ export type ButtonProps = {
   HTMLButtonElement
 >;
 
-export type ResponseType = {
-  status: string;
-  section: string;
-  results: ResultType[];
-};
+export interface UseToggleProps {
+  isOpen: boolean;
+  handleToggle: () => void;
+}
 
-export type ResultType = {
-  section: string;
-  subsection: string;
-  title: string;
-  abstract: string;
-  url: string;
-  byline: string;
-  multimedia: MultimediaType[];
-};
-
-export type MultimediaType = {
-  url: string;
-  width: number;
-  caption: string;
-  copyright: string;
-};
-
-export type GetStockProps = {
-  queryKey: string;
-  stocksTicker: string;
-  date: string;
-};
-
-export type ArticleProps = {
+export interface ArticleProps {
   url: string;
   title: string;
   abstract: string;
   byline: string;
-  multimedia: { url: string }[];
-};
+  multimedia: {
+    url: string;
+    copyright?: string;
+  }[];
+}
 
-export type TopStoriesProps = {
-  startLongArticle: number;
-  endLongArticle: number;
+export interface TopStoriesProps {
+  startLongArticle1: number;
+  endLongArticle1: number;
+  startLongArticle2: number;
+  endLongArticle2: number;
   startShortArticle: number;
   endShortArticle: number;
   startMultimedia: number;
   endMultimedia: number;
-};
+}
 
-export type SectionProps = {
-  params: {
-    section: string;
-  };
-};
+export interface BooksProps {
+  amazon_product_url: string;
+  rank: number;
+  title: string;
+  description: string;
+  author: string;
+  book_image: string;
+}
 
-export type UseFetchArticleProps = {
-  queryKey: string;
-  api: string;
-  section: string;
-};
-
-export type UseToggleProps = {
-  isOpen: boolean;
-  handleToggle: () => void;
-};
+export interface UserLocationProps {
+  latitude: number | null;
+  longitude: number | null;
+}

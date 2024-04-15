@@ -12,7 +12,7 @@ export default function GetCurrentDate() {
       <span className="block font-bold">{formattedDate}</span>
       <a
         href="https://www.nytimes.com/section/todayspaper"
-        className="hover:text-neutral-500 dark:hover:text-neutral-300 duration-300 hover:duration-300"
+        className="hidden lg:inline hover:text-neutral-500 dark:hover:text-neutral-300 duration-300 hover:duration-300"
       >
         Today's Paper
       </a>

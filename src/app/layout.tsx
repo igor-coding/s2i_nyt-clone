@@ -1,4 +1,4 @@
-import "@/styles/globals.css";
+import "@/app/globals.css";
 
 import { Providers } from "@/app/providers";
 import { albert_sans } from "@/components/ui/fonts";
@@ -12,6 +12,7 @@ export const metadata = {
 
 import { cn } from "@/utils/cn";
 
+import Header from "@/components/header/Header";
 import Footer from "@/components/Footer";
 
 export default function RootLayout({
@@ -23,13 +24,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "overflow-x-hidden max-w-[1350px] mx-auto px-5 bg-white text-black dark:bg-black dark:text-white",
+          "h-screen lg:max-w-[1350px] lg:mx-auto lg:px-5 bg-white text-black dark:bg-black dark:text-white",
           albert_sans.className,
         )}
       >
         <Providers>
-          {/* TODO: Render `Header` only if in Home Page else render `SectionHeader` */}
-          {/* <Header /> */}
+          <Header />
           {children}
           <Footer />
         </Providers>
