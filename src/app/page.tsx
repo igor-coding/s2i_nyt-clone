@@ -12,12 +12,12 @@ const queryClient = new QueryClient();
 export default function Main() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Page />
+      <Home />
     </QueryClientProvider>
   );
 }
 
-export function Page() {
+const Home = () => {
   return (
     <div className="px-6 md:grid grid-cols-4 gap-4">
       <main className="md:col-span-4 lg:col-span-3">
@@ -63,4 +63,4 @@ export function Page() {
       <Aside />
     </div>
   );
-}
+};
