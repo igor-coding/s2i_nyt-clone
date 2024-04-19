@@ -1,19 +1,3 @@
-import type { ReactNode, ButtonHTMLAttributes, DetailedHTMLProps } from "react";
-
-export type ButtonProps = {
-  type: "button" | "submit";
-  className?: string;
-  children: ReactNode;
-} & DetailedHTMLProps<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
->;
-
-export interface UseToggleProps {
-  isOpen: boolean;
-  handleToggle: () => void;
-}
-
 export interface ArticleProps {
   url: string;
   title: string;
@@ -23,17 +7,6 @@ export interface ArticleProps {
     url: string;
     copyright?: string;
   }[];
-}
-
-export interface TopStoriesProps {
-  startLongArticle1: number;
-  endLongArticle1: number;
-  startLongArticle2: number;
-  endLongArticle2: number;
-  startShortArticle: number;
-  endShortArticle: number;
-  startMultimedia: number;
-  endMultimedia: number;
 }
 
 export interface BooksProps {

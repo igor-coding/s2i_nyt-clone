@@ -8,7 +8,7 @@ import type { UserLocationProps } from "@/types";
 
 const queryClient = new QueryClient();
 
-export default function Weather() {
+export default function Weather({ className }: { className?: string }) {
   const [userLocation, setUserLocation] = useState<UserLocationProps>({
     latitude: null,
     longitude: null,
@@ -27,6 +27,7 @@ export default function Weather() {
         <GetWeather
           latitude={userLocation.latitude}
           longitude={userLocation.longitude}
+          className={className}
         />
       ) : userLocation.latitude === null ? (
         <span className="flex flex-1 justify-end">
@@ -40,12 +41,14 @@ export default function Weather() {
   );
 }
 
-export function GetWeather({
+function GetWeather({
   latitude,
   longitude,
+  className,
 }: {
   latitude: number;
   longitude: number;
+  className?: string;
 }) {
   const { isPending, isError, data } = getWeather(latitude, longitude);
 
@@ -59,7 +62,7 @@ export function GetWeather({
 
   return (
     <div className="flex flex-1 flex-col justify-end space-x-2 text-right capitalize">
-      <span>
+      <span className={className}>
         {data.name}, {data.sys.country}
       </span>
       <span>

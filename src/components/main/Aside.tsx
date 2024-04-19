@@ -3,8 +3,7 @@ import { noto_serif } from "@/components/ui/fonts";
 import type { ArticleProps } from "@/types";
 
 import Image from "next/image";
-import articleImgPlaceholderMd from "../../../public/article-img-placeholder_md.png";
-import articleImgPlaceholderSm from "../../../public/article-img-placeholder_sm.png";
+import imgPlaceholder from "../../../public/img-placeholder.jpg";
 import AsideSkeleton from "@/components/ui/AsideSkeleton";
 
 import { getNewsWire } from "@/api/getArticle";
@@ -27,7 +26,7 @@ export default function Aside() {
   }
 
   return (
-    <aside className="hidden lg:inline border-l border-neutral-200 dark:border-neutral-700 my-8 pl-4 divide-y divide-black dark:divide-white">
+    <aside className="hidden min-[1070px]:block border-l border-neutral-200 dark:border-neutral-700 my-8 pl-4 divide-y divide-black dark:divide-white">
       <section className="pb-4">
         <div className="after:content-[''] after:block after:h-px after:w-full after:bg-neutral-200 dark:after:bg-neutral-700 after:my-4">
           <a
@@ -37,13 +36,13 @@ export default function Aside() {
             {data[0].multimedia[2]?.url ? (
               <img
                 src={data[0].multimedia[2]?.url}
-                alt="Article cover"
+                alt={data[0].title}
                 className="w-full"
               />
             ) : (
               <Image
-                src={articleImgPlaceholderMd}
-                alt="Article cover"
+                src={imgPlaceholder}
+                alt={data[0].title}
                 className="w-full"
               />
             )}
@@ -78,13 +77,13 @@ export default function Aside() {
                 {article.multimedia[2]?.url ? (
                   <img
                     src={article.multimedia[2]?.url}
-                    alt="Article cover"
+                    alt={data[0].title}
                     className="w-full"
                   />
                 ) : (
                   <Image
-                    src={articleImgPlaceholderSm}
-                    alt="Article cover"
+                    src={imgPlaceholder}
+                    alt={data[0].title}
                     className="w-full"
                   />
                 )}

@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { useToggle } from "@/hooks/useToggle";
 import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut";
 
 import { Button } from "@/components/ui/buttons";
 import Icons from "@/components/ui/icons";
 
-export const autoFocus = (isOpen: boolean) => {
+const autoFocus = (isOpen: boolean) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -21,14 +22,11 @@ export const autoFocus = (isOpen: boolean) => {
 
 export default function Searchbar() {
   const [searchValue, setSearchValue] = useState("");
+  const { replace } = useRouter();
   const { isOpen, handleToggle } = useToggle();
   const searchInput = autoFocus(isOpen);
 
-  const handleInputChange = (e: React.FormEvent<HTMLInputElement>) => {
-    setSearchValue(e.currentTarget.value);
-  };
-
-  const handleResetClick = () => {
+  const handleReset = () => {
     setSearchValue("");
     searchInput.current?.focus();
   };
@@ -41,32 +39,39 @@ export default function Searchbar() {
         {Icons.search}
       </Button>
       {isOpen && (
-        <form
-          method="get"
-          action="/search"
-          className="flex items-center space-x-1"
-        >
+        <div className="flex items-center space-x-1">
           <div className="bg-white dark:bg-black py-1 pl-2 pr-12 text-base border rounded border-neutral-500 focus-within:border-1 focus-within:border-black focus-within:shadow dark:focus-within:border-white">
             <input
               type="search"
-              name="q"
               placeholder="search"
-              value={searchValue}
               ref={searchInput}
-              onChange={handleInputChange}
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.target.value)}
+              onKeyDown={(e) =>
+                e.key === "Enter" &&
+                replace(`/search?query=${searchValue.toLowerCase()}`)
+              }
               className="placeholder:uppercase placeholder:text-neutral-400"
             />
             {searchValue && (
               <input
                 type="reset"
                 value="clear"
-                onClick={handleResetClick}
+                onClick={handleReset}
                 className="absolute pl-1 text-xxs text-neutral-400 cursor-pointer uppercase"
               />
             )}
           </div>
-          <Button type="submit">go</Button>
-        </form>
+          <Button
+            type="submit"
+            onClick={() =>
+              replace(`/search?query=${searchValue.toLowerCase()}`)
+            }
+            className="hidden lg:block"
+          >
+            go
+          </Button>
+        </div>
       )}
     </div>
   );

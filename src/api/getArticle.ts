@@ -36,3 +36,15 @@ export const getBooks = () => {
     },
   });
 };
+
+export const getSearch = (searchQuery: string) => {
+  return useQuery({
+    queryKey: ["search", searchQuery],
+    queryFn: async () => {
+      const { data } = await axios.get(
+        `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchQuery}&fq=source:("The New York Times")&page=0&sort=newest&api-key=${process.env.NEXT_PUBLIC_NYT_KEY}`,
+      );
+      return data.response.docs;
+    },
+  });
+};

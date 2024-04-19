@@ -4,8 +4,9 @@ import { noto_serif } from "@/components/ui/fonts";
 import { getTopStories } from "@/api/getArticle";
 
 import Image from "next/image";
-import articleImgPlaceholderLg from "../../../public/article-img-placeholder_lg.png";
+import imgPlaceholder from "../../../public/img-placeholder.jpg";
 import MoreNewsSkeleton from "@/components/ui/MoreNewsSkeleton";
+import IsError from "@/utils/isError";
 
 import type { ArticleProps } from "@/types";
 
@@ -23,44 +24,69 @@ export default function MoreNews() {
   }
 
   if (isError) {
-    return <p>Error loading data</p>;
+    return (
+      <>
+        <p
+          className={cn(
+            "font-semibold text-2xl md:text-lg",
+            noto_serif.className,
+          )}
+        >
+          More News Section
+        </p>
+        <IsError className="px-0" />
+      </>
+    );
   }
 
   return (
-    <>
+    <div className="divide-y divide-black dark:divide-white">
       {data.slice(9, 15).map((article: ArticleProps) => (
         <a
           key={article.url}
           href={article.url}
-          className="py-8 lg:grid grid-cols-12 hover:text-neutral-500 hover:dark:text-neutral-300 duration-150"
+          className="py-4 lg:py-8 grid md:grid-cols-12 lg:hover:text-neutral-500 lg:hover:dark:text-neutral-300 duration-150"
         >
-          <article className="col-span-4">
+          <article className="md:col-span-4">
             <div className="space-y-2">
-              <p className={cn("font-semibold text-lg", noto_serif.className)}>
+              <p
+                className={cn(
+                  "font-semibold text-2xl md:text-lg",
+                  noto_serif.className,
+                )}
+              >
                 {article.title}
               </p>
-              <p className="text-sm text-neutral-600 dark:text-neutral-300">
+              <p className="text-base md:text-sm text-neutral-600 dark:text-neutral-300">
                 {article.abstract}
               </p>
-              <p className="text-xxs text-neutral-600 dark:text-neutral-300 truncate">
+              <p className="text-xs md:text-xxs text-neutral-600 dark:text-neutral-300 truncate">
                 {article.byline}
               </p>
             </div>
           </article>
-          <div className="pl-4 col-span-8 justify-self-end text-right">
+          <div className="pt-4 md:pt-0 md:pl-4 md:col-span-8 md:justify-self-end text-right">
             <figure className="w-full">
               {article.multimedia[0]?.url ? (
-                <img src={article.multimedia[0]?.url} alt={article.title} />
+                <img
+                  src={article.multimedia[0]?.url}
+                  alt={article.title}
+                  className="w-full"
+                />
               ) : (
-                <Image src={articleImgPlaceholderLg} alt={article.title} />
+                <Image
+                  src={imgPlaceholder}
+                  alt={article.title}
+                  className="w-full"
+                />
               )}
-              <figcaption className="pt-2 text-xxs text-neutral-800 dark:text-neutral-300">
+              <figcaption className="pt-1 text-xxs text-neutral-800 dark:text-neutral-300">
                 {article.multimedia[0]?.copyright}
               </figcaption>
             </figure>
           </div>
         </a>
       ))}
-    </>
+    </div>
   );
 }

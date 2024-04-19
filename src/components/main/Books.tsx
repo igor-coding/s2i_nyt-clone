@@ -5,6 +5,7 @@ import { getBooks } from "@/api/getArticle";
 import type { BooksProps } from "@/types";
 
 import BooksSkeleton from "@/components/ui/BooksSkeleton";
+import IsError from "@/utils/isError";
 
 export default function Books() {
   const { isLoading, isError, data } = getBooks();
@@ -12,6 +13,14 @@ export default function Books() {
   if (isLoading) {
     return (
       <>
+        <p
+          className={cn(
+            "pt-8 pb-4 text-3xl font-bold capitalize",
+            noto_serif.className,
+          )}
+        >
+          the new york times best sellers
+        </p>
         <BooksSkeleton />
         <BooksSkeleton />
         <BooksSkeleton />
@@ -21,32 +30,32 @@ export default function Books() {
 
   if (isError) {
     return (
-      <div className="space-y-2">
-        <p className="text-2xl">Books</p>
-        <p className="pb-8 text-lg">
-          Something went wrong... Please refresh the page later
+      <>
+        <p className={cn("font-semibold text-2xl", noto_serif.className)}>
+          The New York Times Best Sellers
         </p>
-      </div>
+        <IsError className="px-0" />
+      </>
     );
   }
 
-  const booksData = data.lists[0].books;
+  const books = data.lists[0].books;
 
   return (
-    <>
+    <div className="pt-8 divide-y divide-neutral-200 dark:divide-neutral-700">
       <h1
         className={cn(
-          "pt-6 pb-4 text-3xl font-bold capitalize",
+          "pb-4 text-3xl font-bold capitalize",
           noto_serif.className,
         )}
       >
         the new york times best sellers
       </h1>
-      {booksData.slice(0, 10).map((book: BooksProps) => (
-        <section key={book.amazon_product_url}>
+      {books.slice(0, 10).map((book: BooksProps) => (
+        <section key={book.amazon_product_url} className="py-8">
           <a
             href={book.amazon_product_url}
-            className="py-8 grid grid-cols-12 hover:text-neutral-500 hover:dark:text-neutral-300 duration-150"
+            className="grid gap-4 md:gap-0 md:grid-cols-12 lg:hover:text-neutral-500 lg:hover:dark:text-neutral-300 duration-150"
           >
             <div className="pr-8 col-span-2">
               <p
@@ -78,12 +87,12 @@ export default function Books() {
                 </div>
               </div>
             </div>
-            <div className="pl-8 col-span-4 place-self-end">
+            <div className="hidden md:block pl-8 col-span-4 place-self-end">
               <img src={book.book_image} alt="Book cover" className="h-40" />
             </div>
           </a>
         </section>
       ))}
-    </>
+    </div>
   );
 }

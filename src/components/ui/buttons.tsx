@@ -1,9 +1,19 @@
 "use client";
 
+import type { ReactNode, ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+
+type ButtonProps = {
+  type: "button" | "submit";
+  className?: string;
+  children: ReactNode;
+} & DetailedHTMLProps<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>;
+
 import { useToggle } from "@/hooks/useToggle";
 import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut";
 
-import type { ButtonProps } from "@/types";
 import Icons from "@/components/ui/icons";
 
 export function Button({

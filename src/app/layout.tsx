@@ -6,8 +6,6 @@ import { albert_sans } from "@/components/ui/fonts";
 export const metadata = {
   title: "s2i: NYT Clone",
   description: "s2i: New York Times clone",
-  // TODO: Add favicon
-  // icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
 import { cn } from "@/utils/cn";
@@ -24,7 +22,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "h-screen lg:max-w-[1350px] lg:mx-auto lg:px-5 bg-white text-black dark:bg-black dark:text-white",
+          "h-screen lg:max-w-[1350px] lg:mx-auto lg:px-8 bg-white text-black dark:bg-black dark:text-white",
           albert_sans.className,
         )}
       >

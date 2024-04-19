@@ -6,7 +6,7 @@ const formattedDate = new Intl.DateTimeFormat("en-US", {
   day: "numeric",
 }).format(currentDate);
 
-export default function GetCurrentDate() {
+export default function CurrentDate() {
   return (
     <div className="flex-1 text-left">
       <span className="block font-bold">{formattedDate}</span>

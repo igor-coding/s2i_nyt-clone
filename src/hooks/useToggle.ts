@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 
-import type { UseToggleProps } from "@/types";
+interface UseToggleProps {
+  isOpen: boolean;
+  handleToggle: () => void;
+}
 
 export const useToggle = (): UseToggleProps => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleToggle = () => {
-    setIsOpen((prevIsOpen) => !prevIsOpen);
-  };
+  const handleToggle = () => setIsOpen(!isOpen);
 
   return {
     isOpen,

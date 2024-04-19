@@ -1,20 +1,23 @@
-"use client";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { navbar } from "@/data/navbar";
 
-export default function Navbar() {
+interface NavbarProps {
+  closeSidenav?: () => void;
+}
+
+export default function Navbar({ closeSidenav }: NavbarProps) {
   const pathname = usePathname().split("/")[1];
 
   return (
-    <nav className="p-4">
-      <ul className="flex justify-center itmes-center space-x-4">
+    <nav className="font-bold text-2xl lg:font-normal lg:text-sm lg:py-2 lg:px-4">
+      <ul className="flex flex-col lg:flex-row justify-center items-center lg:space-x-4">
         {navbar.map((item) => (
-          <li key={item.id} className="flex items-center">
+          <li key={item.path} className="flex items-center">
             <Link
               href={item.path}
+              onClick={closeSidenav}
               className={`py-1.5 px-2 rounded capitalize duration-300 hover:duration-300"
               ${
                 pathname === item.text.replace(/\./g, "")
