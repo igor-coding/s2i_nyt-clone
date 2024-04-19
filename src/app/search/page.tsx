@@ -13,9 +13,8 @@ export default function Search() {
   );
 }
 
-const GetSearch = ({ searchParams }: { searchParams?: { query?: string } }) => {
-  const query = searchParams?.query || "";
-  const { isLoading, error, data } = getSearch(query);
+const GetSearch = () => {
+  const { isLoading, error, data } = getSearch("election");
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -27,11 +26,7 @@ const GetSearch = ({ searchParams }: { searchParams?: { query?: string } }) => {
 
   return (
     <div>
-      {data.map((article) => (
-        <div key={article.web_url} className={article.headline.main}>
-          <h1>{article.web_url}</h1>
-        </div>
-      ))}
+      <h1>Search Page</h1>
     </div>
   );
 };
