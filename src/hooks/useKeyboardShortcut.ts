@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-type Key = "ctrl" | "shift" | "alt" | string;
+type Key = "ctrl" | string;
 
 export const useKeyboardShortcut = (keys: Key[], callback: () => void) => {
   useEffect(() => {
@@ -9,8 +9,6 @@ export const useKeyboardShortcut = (keys: Key[], callback: () => void) => {
         keys.every(
           (key) =>
             (key === "ctrl" && event.ctrlKey) ||
-            (key === "shift" && event.shiftKey) ||
-            (key === "alt" && event.altKey) ||
             (typeof key === "string" && event.key.toLowerCase() === key),
         )
       ) {

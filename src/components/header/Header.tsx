@@ -6,7 +6,6 @@ import Icons from "@/components/ui/icons";
 import { BtnActions } from "@/components/ui/buttons";
 import { Button } from "@/components/ui/buttons";
 
-import Searchbar from "@/components/header/Searchbar";
 import Languages from "@/components/header/Languages";
 import CurrentDate from "@/components/header/Date";
 import Weather from "@/components/header/Weather";
@@ -19,9 +18,8 @@ export default function Header() {
     <>
       <header className="hidden lg:block mb-6 w-full border-double border-b-4 border-black dark:border-white text-xs">
         <section className="flex items-center py-2 text-xxs">
-          <div className="flex flex-1">
+          <div className="flex-1">
             <ThemeSwitcher />
-            <Searchbar />
           </div>
           <Languages />
           <BtnActions />

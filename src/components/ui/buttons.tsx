@@ -11,11 +11,6 @@ type ButtonProps = {
   HTMLButtonElement
 >;
 
-import { useToggle } from "@/hooks/useToggle";
-import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut";
-
-import Icons from "@/components/ui/icons";
-
 export function Button({
   type,
   className = "",
@@ -35,16 +30,6 @@ export function Button({
     >
       {children}
     </button>
-  );
-}
-
-export function BtnSearch() {
-  useKeyboardShortcut(["ctrl", "s"], useToggle);
-
-  return (
-    <Button type="button" onClick={useToggle}>
-      {Icons.search}
-    </Button>
   );
 }
 

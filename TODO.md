@@ -1,8 +1,8 @@
 # TODO
 
-- [ ] Create Search section
+- [ ] Add favicon
 - [ ] Mantain the types file or place types in every file needed?
-- [ ] Add favicon and other meta tags
+- [ ] Create Search section
 - [x] Add a dark mode toggle button with the manual tailwind
 - [x] In place of stocks add weather
 - [x] Add a `404 not found` page

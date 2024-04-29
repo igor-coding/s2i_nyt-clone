@@ -4,8 +4,9 @@ import { Providers } from "@/app/providers";
 import { albert_sans } from "@/components/ui/fonts";
 
 export const metadata = {
-  title: "s2i: NYT Clone",
-  description: "s2i: New York Times clone",
+  title: "NYTimes Clone",
+  description:
+    "A New York Times clone. Powered by Igor Fiorio for Start2Impact",
 };
 
 import { cn } from "@/utils/cn";

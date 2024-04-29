@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/buttons";
 import Icons from "@/components/ui/icons";
 
 import ThemeSwitcher from "@/components/ThemeSwitcher";
-import Searchbar from "@/components/header/Searchbar";
 import Navbar from "@/components/header/Navbar";
 
 export default function Sidenav() {
@@ -27,10 +26,7 @@ export default function Sidenav() {
         </Button>
       ) : (
         <div className="z-10 fixed top-0 left-0 h-full w-full px-4 bg-white dark:bg-black flex flex-col items-center justify-evenly gap-8">
-          <div className="flex items-center">
-            <ThemeSwitcher />
-            <Searchbar />
-          </div>
+          <ThemeSwitcher />
           <Navbar closeSidenav={handleToggle} />
           <button
             type="button"
