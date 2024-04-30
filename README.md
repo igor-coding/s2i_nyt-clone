@@ -1,9 +1,10 @@
 # New York Times Clone
 
 Link to the website → [NYTimes Clone](https://s2i-nyt-clone.vercel.app/)
-This website is just a project created for Start2Impact and recreates a similar page from New York Times.
 
 ![showcase.png](./public/showcase.png)
+
+This website is just a project created for Start2Impact and recreates a similar page from New York Times.
 
 ## Keyboard shortcuts
 
