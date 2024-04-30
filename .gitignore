@@ -19,7 +19,7 @@ bun.lockb
 *.pem
 .DS_Store
 **/.DS_Store
-# TODO.md
+TODO.md
 Session.vim
 
 # debug
