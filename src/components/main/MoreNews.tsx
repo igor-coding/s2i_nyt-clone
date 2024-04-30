@@ -45,7 +45,7 @@ export default function MoreNews() {
         <a
           key={article.url}
           href={article.url}
-          className="py-4 lg:py-8 grid md:grid-cols-12 lg:hover:text-neutral-500 lg:hover:dark:text-neutral-300 duration-150"
+          className="py-4 lg:py-8 grid grid-cols-1 md:grid-cols-12 lg:hover:text-neutral-500 lg:hover:dark:text-neutral-300 duration-150"
         >
           <article className="md:col-span-4">
             <div className="space-y-2">
