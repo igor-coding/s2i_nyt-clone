@@ -6,12 +6,12 @@ import Icons from "@/components/ui/icons";
 import { BtnActions } from "@/components/ui/buttons";
 import { Button } from "@/components/ui/buttons";
 
+import ThemeSwitcher from "@/components/ThemeSwitcher";
+import Sidenav from "@/components/main/Sidenav";
 import Languages from "@/components/header/Languages";
 import CurrentDate from "@/components/header/Date";
 import Weather from "@/components/header/Weather";
 import Navbar from "@/components/header/Navbar";
-import Sidenav from "@/components/main/Sidenav";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export default function Header() {
   return (
