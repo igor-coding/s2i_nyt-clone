@@ -12,4 +12,6 @@ This website is just a project created for Start2Impact and recreates a similar 
 - **ctrl + a**: toggle the appearence based on system theme
   (on mobile hold down the icon)
 
-\*The ability to change language, subscribe or register is not available.
+#### Notes
+
+The ability to change language, subscribe or register is not available.
