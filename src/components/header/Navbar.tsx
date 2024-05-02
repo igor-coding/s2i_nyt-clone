@@ -26,7 +26,7 @@ export default function Navbar({ closeSidenav }: NavbarProps) {
               }
               `}
             >
-              {item.text}
+              {item.text.includes("us") ? "U.S." : item.text}
             </Link>
           </li>
         ))}
